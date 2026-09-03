@@ -9,6 +9,12 @@ description: "台本と素材一覧から、Episode の content.json と edit.js
 
 必要な入力は、対象 Episode、台本または Brief、利用可能な素材、使う Composition、尺、配置意図である。未確定の内容は実在しない Asset、Palmier ID、Timeline 状態として補完しない。
 
+## 表現の配置判断
+
+content.json に item を追加する前に、root AGENTS.md の Remotion と Palmier の表現選択ガイドを適用する。通常テロップ、字幕、基本的なLower Third、単純タイトル、BGM/SE、カットと尺調整、簡単な画像配置、基本トランジションはPalmierネイティブの編集対象を推奨する。
+
+ただし、名前・肩書き・タイトルであっても、ブランド固有のルックやリッチなアニメーションに明確な価値があり、レンダー後にほぼ完成素材として扱えるならRemotion itemを作成してよい。データ駆動・プログラム生成・複雑な連動もRemotionに適した根拠である。Palmierを選んだ表現は、アダプタ不在を理由にRemotionへ代替せず、必要な編集意図を台本・Brief・notesへ記録する。Palmierの実書込みはこのスキルの範囲外である。
+
 ## 読み取りと境界
 
 変更前に、root と Show の AGENTS.md、show.config.json、theme/tokens.json、brief.md、script.md、対象 Episode の content.json と edit.json、Composition Registry と Zod schema を読む。

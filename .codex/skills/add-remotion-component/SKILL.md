@@ -9,6 +9,14 @@ description: "再利用可能なRemotionコンポーネントを、Zod props、�
 
 不足した入力は、既存の Show 設定とコンポーネントの慣例から最小限に補う。ただし、公開 Composition ID、Canvas、または props 契約が大きく変わる場合は、仮定した内容を明示する。
 
+## Remotion 採用ゲート
+
+実装前に、まず Palmier ネイティブで十分かを判断する。編集時に文言、改行、表示尺、位置を頻繁に触る通常テロップ、字幕、基本的なLower Third、単純タイトル、簡単な画像配置、BGM/SE、基本トランジションは Palmier を第一候補とする。
+
+これは禁止ではない。名前・肩書き・タイトルでも、ブランド固有のルック、複数要素が連動するリッチなアニメーション、再利用可能なモーション設計に明確な価値があり、完成素材として扱えるなら Remotion を選んでよい。データ駆動、プログラム生成、複雑なキネティックタイポグラフィ、コードアニメーション、複雑な図解、ブランドOP/ED、多数要素の連動も同様に適した候補である。
+
+迷う場合は Palmier を推奨する。現在のライブPalmier adapter未実装は、単純な表現をRemotion化する理由にならない。Palmierを選んだ場合は必要な編集仕様を記録し、実書込みや同期はPalmierの安全な別ワークフローに任せる。Remotionを選んだ場合は、編集後にほぼ固定素材として扱える理由と、レンダーコストを上回る表現上の価値を引き渡し時に示す。
+
 ## 事前確認
 
 最初に、対象 Show/Episode の AGENTS.md、docs/component-authoring.md、既存コンポーネント、packages/motion-system/src/Root.tsx、packages/motion-system/src/index.ts を読む。
