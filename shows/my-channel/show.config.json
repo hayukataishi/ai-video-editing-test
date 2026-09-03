@@ -1,0 +1,28 @@
+{
+  "id": "my-channel",
+  "displayName": "My Channel",
+  "defaultThemeId": "my-channel-default",
+  "defaultVideo": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {
+      "numerator": 30,
+      "denominator": 1
+    },
+    "pixelAspectRatio": 1
+  },
+  "safeZone": {
+    "top": 0.08,
+    "right": 0.08,
+    "bottom": 0.08,
+    "left": 0.08,
+    "unit": "normalized"
+  },
+  "palmier": {
+    "projectNamePattern": "{showId}_{episodeId}",
+    "defaultTimeline": "main",
+    "managedTrackNames": [
+      "V2_AUTO_GRAPHICS"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Motion System mark</title>
+  <desc id="desc">A cyan play mark on a dark rounded square.</desc>
+  <defs>
+    <linearGradient id="surface" x1="8" y1="8" x2="88" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f2742"/>
+      <stop offset="1" stop-color="#071525"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="30" y1="23" x2="70" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a5f3fc"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="96" height="96" rx="24" fill="url(#surface)"/>
+  <path d="M35 27.5c0-4.1 4.5-6.6 8-4.5l27.1 16.5a5.25 5.25 0 0 1 0 9l-27.1 16.5c-3.5 2.1-8-0.4-8-4.5v-33Z" fill="url(#accent)"/>
+  <path d="M24 72h48" stroke="#6ee7f9" stroke-width="5" stroke-linecap="round" opacity=".72"/>
+</svg>

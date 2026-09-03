@@ -1,0 +1,157 @@
+{
+  "$schema": "../../../../packages/manifest/schemas/edit-manifest.schema.json",
+  "manifestType": "edit",
+  "schemaVersion": "1.0.0",
+  "projectId": "my-channel",
+  "episodeId": "ep-001",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {
+      "numerator": 30,
+      "denominator": 1
+    },
+    "pixelAspectRatio": 1
+  },
+  "target": {
+    "palmierProject": "my-channel_ep-001",
+    "timeline": "main",
+    "createIfMissing": true
+  },
+  "tracks": [
+    {
+      "id": "main-video",
+      "kind": "video",
+      "role": "primary",
+      "palmierName": "V1_MAIN_HUMAN",
+      "order": 10,
+      "managed": false,
+      "syncLock": true
+    },
+    {
+      "id": "auto-graphics",
+      "kind": "video",
+      "role": "graphics",
+      "palmierName": "V2_AUTO_GRAPHICS",
+      "order": 20,
+      "managed": true,
+      "syncLock": false
+    },
+    {
+      "id": "voice",
+      "kind": "audio",
+      "role": "voice",
+      "palmierName": "A1_VOICE_HUMAN",
+      "order": 10,
+      "managed": false,
+      "syncLock": true
+    }
+  ],
+  "placements": [
+    {
+      "id": "place-opening-title",
+      "source": {
+        "type": "content",
+        "ref": "opening-title"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 0,
+      "durationFrames": 150,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "strict",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "オープニングタイトル。自動管理TrackでのClip衝突は許可しない。"
+    },
+    {
+      "id": "place-workflow-diagram",
+      "source": {
+        "type": "content",
+        "ref": "workflow-diagram"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 1260,
+      "durationFrames": 240,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "picture-in-picture",
+        "position": {
+          "unit": "normalized",
+          "x": 0.76,
+          "y": 0.3
+        },
+        "scale": 0.62,
+        "opacity": 1
+      },
+      "keyframes": [
+        {
+          "property": "opacity",
+          "points": [
+            {
+              "frameOffset": 0,
+              "value": 0,
+              "interpolation": "ease-out"
+            },
+            {
+              "frameOffset": 12,
+              "value": 1,
+              "interpolation": "linear"
+            },
+            {
+              "frameOffset": 228,
+              "value": 1,
+              "interpolation": "ease-in"
+            },
+            {
+              "frameOffset": 239,
+              "value": 0,
+              "interpolation": "linear"
+            }
+          ]
+        }
+      ],
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "話者の顔を避ける右上配置。Palmier側の仕上げEffectは保持する。"
+    }
+  ],
+  "markers": [
+    {
+      "id": "review-opening",
+      "startFrame": 75,
+      "label": "オープニングタイトル確認",
+      "note": "TypographyとSafe Zoneを確認する。",
+      "managed": true
+    },
+    {
+      "id": "review-diagram",
+      "startFrame": 1260,
+      "endFrame": 1500,
+      "label": "ワークフロー図解確認",
+      "note": "図解が話者に重なっていないことを確認する。",
+      "managed": true
+    }
+  ],
+  "inspectionFrames": [
+    1,
+    75,
+    149,
+    1261,
+    1380,
+    1499
+  ],
+  "metadata": {
+    "title": "Episode 001 編集意図",
+    "author": "動画制作基盤チーム",
+    "createdAt": "2026-09-03T00:00:00+09:00"
+  }
+}

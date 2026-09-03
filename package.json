@@ -1,0 +1,39 @@
+{
+  "name": "ai-video-editing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.16.1",
+  "engines": {
+    "node": ">=20.19.0",
+    "pnpm": ">=10.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "scripts": {
+    "studio": "pnpm --filter @studio/motion-system studio",
+    "storybook": "pnpm --filter @studio/motion-system storybook",
+    "build-storybook": "pnpm --filter @studio/motion-system build-storybook",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "lint": "eslint .",
+    "test": "pnpm -r --if-present test",
+    "validate:episode": "tsx packages/pipeline/src/cli.ts validate",
+    "render:episode": "tsx packages/pipeline/src/cli.ts render",
+    "palmier:plan": "tsx packages/pipeline/src/cli.ts palmier:plan",
+    "palmier:sync": "tsx packages/pipeline/src/cli.ts palmier:sync",
+    "qa:episode": "tsx packages/pipeline/src/cli.ts qa",
+    "build:episode": "tsx packages/pipeline/src/cli.ts build"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "26.4.1",
+    "eslint": "10.9.1",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.69.0",
+    "vitest": "4.1.11"
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://studio.invalid/video-pipeline/edit-manifest.schema.json",
+  "title": "Palmier Edit Manifest",
+  "description": "Declares NLE-independent placement and editing intent for a Palmier timeline.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifestType",
+    "schemaVersion",
+    "projectId",
+    "episodeId",
+    "video",
+    "target",
+    "tracks",
+    "placements"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifestType": {
+      "const": "edit"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^1\\.\\d+\\.\\d+$"
+    },
+    "projectId": {
+      "$ref": "#/$defs/logicalId"
+    },
+    "episodeId": {
+      "$ref": "#/$defs/logicalId"
+    },
+    "video": {
+      "$ref": "#/$defs/videoSpec"
+    },
+    "target": {
+      "$ref": "#/$defs/target"
+    },
+    "tracks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/track"
+      }
+    },
+    "placements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/placement"
+      }
+    },
+    "markers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/marker"
+      }
+    },
+    "inspectionFrames": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/frame"
+      },
+      "uniqueItems": true
+    },
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    }
+  },
+  "$defs": {
+    "logicalId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "relativePath": {
+      "type": "string",
+      "pattern": "^(?!/)(?!\\\\)(?![A-Za-z]:[\\\\/]).+$"
+    },
+    "frame": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "positiveFrame": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "frameRate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "numerator",
+        "denominator"
+      ],
+      "properties": {
+        "numerator": {
+          "$ref": "#/$defs/positiveFrame"
+        },
+        "denominator": {
+          "$ref": "#/$defs/positiveFrame"
+        }
+      }
+    },
+    "videoSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height",
+        "frameRate"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 16,
+          "maximum": 32768
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 16,
+          "maximum": 32768
+        },
+        "frameRate": {
+          "$ref": "#/$defs/frameRate"
+        },
+        "pixelAspectRatio": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 1
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "palmierProject",
+        "timeline"
+      ],
+      "properties": {
+        "palmierProject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timeline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "createIfMissing": {
+          "type": "boolean",
+          "default": true
+        },
+        "duplicateFromTimeline": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "track": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "role",
+        "palmierName",
+        "managed"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/logicalId"
+        },
+        "kind": {
+          "enum": [
+            "video",
+            "audio"
+          ]
+        },
+        "role": {
+          "enum": [
+            "primary",
+            "broll",
+            "graphics",
+            "overlay",
+            "captions",
+            "voice",
+            "music",
+            "sfx",
+            "reference",
+            "other"
+          ]
+        },
+        "palmierName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "order": {
+          "$ref": "#/$defs/frame"
+        },
+        "managed": {
+          "type": "boolean"
+        },
+        "syncLock": {
+          "type": "boolean"
+        },
+        "mute": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "ref"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "content",
+            "file",
+            "palmier-media",
+            "timeline"
+          ]
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "content"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "type": "object",
+            "properties": {
+              "ref": {
+                "$ref": "#/$defs/logicalId"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "file"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "type": "object",
+            "properties": {
+              "ref": {
+                "$ref": "#/$defs/relativePath"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unit",
+        "x",
+        "y"
+      ],
+      "properties": {
+        "unit": {
+          "enum": [
+            "normalized",
+            "pixels"
+          ]
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "crop": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "properties": {
+        "left": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "top": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "right": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "bottom": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "preset": {
+          "enum": [
+            "full-frame",
+            "contain",
+            "cover",
+            "picture-in-picture",
+            "sidebar-left",
+            "sidebar-right",
+            "split-left",
+            "split-right",
+            "grid"
+          ]
+        },
+        "position": {
+          "$ref": "#/$defs/position"
+        },
+        "anchor": {
+          "$ref": "#/$defs/position"
+        },
+        "scale": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rotationDegrees": {
+          "type": "number"
+        },
+        "opacity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "crop": {
+          "$ref": "#/$defs/crop"
+        },
+        "blendMode": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "volumeDb": {
+          "type": "number",
+          "minimum": -96,
+          "maximum": 24
+        },
+        "fadeInFrames": {
+          "$ref": "#/$defs/frame"
+        },
+        "fadeOutFrames": {
+          "$ref": "#/$defs/frame"
+        }
+      }
+    },
+    "vector2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "keyframeValue": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "#/$defs/vector2"
+        },
+        {
+          "$ref": "#/$defs/crop"
+        }
+      ]
+    },
+    "keyframePoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frameOffset",
+        "value"
+      ],
+      "properties": {
+        "frameOffset": {
+          "$ref": "#/$defs/frame"
+        },
+        "value": {
+          "$ref": "#/$defs/keyframeValue"
+        },
+        "interpolation": {
+          "enum": [
+            "linear",
+            "ease-in",
+            "ease-out",
+            "ease-in-out",
+            "hold"
+          ]
+        }
+      }
+    },
+    "keyframeLane": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "property",
+        "points"
+      ],
+      "properties": {
+        "property": {
+          "enum": [
+            "opacity",
+            "rotation",
+            "position",
+            "scale",
+            "crop",
+            "blur",
+            "volume"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#/$defs/keyframePoint"
+          }
+        }
+      }
+    },
+    "sync": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy",
+        "allowOverwrite"
+      ],
+      "properties": {
+        "policy": {
+          "enum": [
+            "strict",
+            "placement-only",
+            "once",
+            "manual"
+          ]
+        },
+        "allowOverwrite": {
+          "type": "boolean"
+        },
+        "preservePalmierEffects": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "placement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source",
+        "trackId",
+        "startFrame",
+        "durationFrames",
+        "sync"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/logicalId"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "trackId": {
+          "$ref": "#/$defs/logicalId"
+        },
+        "startFrame": {
+          "$ref": "#/$defs/frame"
+        },
+        "durationFrames": {
+          "$ref": "#/$defs/positiveFrame"
+        },
+        "sourceInFrame": {
+          "$ref": "#/$defs/frame",
+          "default": 0
+        },
+        "layout": {
+          "$ref": "#/$defs/layout"
+        },
+        "audio": {
+          "$ref": "#/$defs/audio"
+        },
+        "keyframes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/keyframeLane"
+          }
+        },
+        "sync": {
+          "$ref": "#/$defs/sync"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "marker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "startFrame",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/logicalId"
+        },
+        "startFrame": {
+          "$ref": "#/$defs/frame"
+        },
+        "endFrame": {
+          "$ref": "#/$defs/frame"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "note": {
+          "type": "string"
+        },
+        "managed": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@studio/pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "validate:episode": "tsx src/cli.ts validate",
+    "render:episode": "tsx src/cli.ts render",
+    "palmier:plan": "tsx src/cli.ts palmier:plan",
+    "palmier:sync": "tsx src/cli.ts palmier:sync",
+    "qa:episode": "tsx src/cli.ts qa"
+  },
+  "dependencies": {
+    "@studio/manifest": "workspace:*",
+    "@studio/motion-system": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.1",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3"
+  }
+}

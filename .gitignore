@@ -1,0 +1,19 @@
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+storybook-static/
+.cache/
+.video-cache/
+.DS_Store
+
+# Remotion build artifacts
+renders/
+shows/**/episodes/**/renders/
+shows/**/episodes/**/state/
+shows/**/episodes/**/reports/*.local.json
+
+# Local editor and Palmier state
+.env
+.env.local
+*.log

@@ -1,0 +1,35 @@
+{
+  "name": "@studio/motion-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./Root": "./src/Root.tsx",
+    "./components/TitleCard": "./src/components/TitleCard.tsx",
+    "./components/FlowDiagram": "./src/components/FlowDiagram.tsx"
+  },
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "typecheck": "tsc --noEmit --pretty false -p tsconfig.json",
+    "lint": "eslint src .storybook"
+  },
+  "dependencies": {
+    "@remotion/player": "4.0.520",
+    "@remotion/zod-types": "4.0.520",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "remotion": "4.0.520",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "10.6.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "storybook": "10.6.0",
+    "vite": "8.2.2"
+  }
+}

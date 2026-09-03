@@ -1,0 +1,97 @@
+{
+  "$schema": "../../../../packages/manifest/schemas/content-manifest.schema.json",
+  "manifestType": "content",
+  "schemaVersion": "1.0.0",
+  "projectId": "my-channel",
+  "episodeId": "ep-001",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {
+      "numerator": 30,
+      "denominator": 1
+    },
+    "pixelAspectRatio": 1
+  },
+  "catalog": {
+    "package": "@studio/motion-system",
+    "revision": "workspace"
+  },
+  "themeId": "my-channel-default",
+  "assets": {
+    "brand-logo": {
+      "kind": "image",
+      "path": "../../shared-assets/brand/logo.svg",
+      "description": "タイトルカードで使うMy Channelのロゴ。"
+    }
+  },
+  "items": [
+    {
+      "id": "opening-title",
+      "compositionId": "TitleCard",
+      "variant": "hero",
+      "durationFrames": 150,
+      "props": {
+        "title": "AI時代の動画制作基盤",
+        "subtitle": "Remotion + Palmier Pro + Codex",
+        "logoAssetId": "brand-logo"
+      },
+      "dependencies": [
+        "brand-logo"
+      ],
+      "render": {
+        "outputFile": "renders/remotion/opening-title.mov",
+        "container": "mov",
+        "codec": "prores",
+        "alpha": false,
+        "audio": false,
+        "proresProfile": "hq"
+      },
+      "description": "全画面表示するオープニング用タイトルカード。",
+      "tags": [
+        "opening",
+        "title"
+      ]
+    },
+    {
+      "id": "workflow-diagram",
+      "compositionId": "FlowDiagram",
+      "variant": "three-stage",
+      "durationFrames": 240,
+      "props": {
+        "title": "動画制作パイプライン",
+        "nodes": [
+          {
+            "label": "Remotion",
+            "caption": "コンポーネントをレンダリング"
+          },
+          {
+            "label": "Codex",
+            "caption": "検証して差分同期を計画"
+          },
+          {
+            "label": "Palmier Pro",
+            "caption": "編集・レイアウトを仕上げる"
+          }
+        ]
+      },
+      "render": {
+        "outputFile": "renders/remotion/workflow-diagram.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "Remotion、Codex、Palmier Proの役割を示す図解。",
+      "tags": [
+        "diagram",
+        "explainer"
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "Episode 001 グラフィック素材",
+    "author": "動画制作基盤チーム",
+    "createdAt": "2026-09-03T00:00:00+09:00"
+  }
+}
