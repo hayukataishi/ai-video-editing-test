@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Remotion Component"
+  short_description: "再利用可能なRemotion部品を契約から検証まで追加"
+  default_prompt: "Use $add-remotion-component to add a frame-driven Remotion component with registry, stories, and sample content."

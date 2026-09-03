@@ -1,0 +1,4 @@
+interface:
+  display_name: "Author Episode Manifests"
+  short_description: "台本と素材から安全なEpisode Manifestを作成・更新"
+  default_prompt: "Use $author-episode-manifests to safely author content.json and edit.json for an episode."

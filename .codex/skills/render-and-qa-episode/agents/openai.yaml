@@ -1,0 +1,4 @@
+interface:
+  display_name: "Render and QA Episode"
+  short_description: "差分レンダーと現行Phase 1 QAを実行・報告"
+  default_prompt: "Use $render-and-qa-episode to render changed episode items and report Phase 1 QA results."

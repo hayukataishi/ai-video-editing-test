@@ -1,0 +1,4 @@
+interface:
+  display_name: "Palmier Sync"
+  short_description: "Palmier同期の安全なオフライン計画を生成・判定"
+  default_prompt: "Use $palmier-sync to produce a safe Palmier dry-run plan without claiming a live sync."

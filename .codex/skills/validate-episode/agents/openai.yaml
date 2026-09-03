@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Episode"
+  short_description: "Episode Manifestと出力準備の問題を診断して修正方針を示す"
+  default_prompt: "Use $validate-episode to validate an episode and propose the smallest safe fixes."
