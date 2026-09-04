@@ -55,6 +55,16 @@ packages/motion-system/src/components/<Name>.stories.tsx を追加する。@remo
 - 主要なデザインまたはコンテンツ Variant を少なくとも1つ作る。
 - 長い日本語、最小/最大配列、欠落可能な値など、実際の props 境界を表す Edge case を少なくとも1つ作る。
 
+## Storybook Visual QA（必須）
+
+`pnpm build-storybook` の成功だけで視覚確認済みとは扱わない。公開Componentを追加・変更したら、Storybookの実際の `@remotion/player` 表示を確認し、問題があればコードまたはpropsを修正して同じ確認を繰り返す。
+
+- Default、主要Variant、Edge caseを、Compositionと同じCanvas・aspect ratioで表示する。透明背景を出力できるComponentは、輪郭・影・欠けを判別できるコントラストのあるStory背景も用意する。
+- 静止画だけで済ませず、少なくとも開始フレーム、入場演出が収束したフレーム、表示中の代表フレーム、outroがある場合は終了直前を確認する。StorybookのPlayer操作、または利用可能なローカルブラウザのスクリーンショットを使う。
+- 次を目視で判定する: 文字・縁取り・影・装飾の重なり、フォントのfallback／字形崩れ、改行・長文時のはみ出し／切り抜き、Safe Zone逸脱、背景との可読性、各frameでの不要なちらつき。
+- 問題を見つけたら、Storybook上で再現できるpropsを維持したまま、文字サイズ・行間・余白・font stack・layer順・描画方法を最小限修正する。修正後に同じStoryと該当frameを再確認してから進む。
+- 視覚確認で使ったStory名、確認したframeまたは時点、修正の有無を引き渡しに記録する。実環境にフォントがないなど未解決の制約は、完了扱いにせず明示する。
+
 ## サンプル Content
 
 独立した manifest.json は作らない。content.json と edit.json が正規 Manifest である。
@@ -79,4 +89,4 @@ pnpm build-storybook
 pnpm validate:episode --episode <episode-dir>
 ~~~
 
-失敗時は、自分の変更による失敗を修正して再実行する。既存の失敗なら変更由来の失敗と区別して報告する。完了時には、追加した公開 ID、props 契約、Story（Default/Variant/Edge case）、サンプル item、実行結果を簡潔に示す。
+失敗時は、自分の変更による失敗を修正して再実行する。既存の失敗なら変更由来の失敗と区別して報告する。完了時には、追加した公開 ID、props 契約、Story（Default/Variant/Edge case）、Storybook Visual QA（確認Story・frame・修正結果）、サンプル item、実行結果を簡潔に示す。

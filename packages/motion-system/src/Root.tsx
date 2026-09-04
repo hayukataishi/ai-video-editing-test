@@ -5,6 +5,9 @@ import {
   flowDiagramSchema,
   PaintedLowerThird,
   paintedLowerThirdSchema,
+  PopShowTitle,
+  popShowTitleDefaultProps,
+  popShowTitleSchema,
   TitleCard,
   titleCardSchema,
 } from "./components";
@@ -94,6 +97,16 @@ export const RemotionRoot = () => {
             roleText: motionSystemTheme.colors.charcoal,
           },
         }}
+      />
+      <Composition
+        id="PopShowTitle"
+        component={PopShowTitle}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={popShowTitleSchema}
+        defaultProps={popShowTitleDefaultProps}
       />
     </>
   );

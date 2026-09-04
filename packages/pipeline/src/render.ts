@@ -80,6 +80,15 @@ const renderItem = async ({
     argumentsForRender.push('--image-format=png');
   }
 
+  if (item.render.pixelFormat !== undefined) {
+    argumentsForRender.push(`--pixel-format=${item.render.pixelFormat}`);
+  } else if (item.render.alpha && item.render.codec === 'prores') {
+    // ProRes 4444 alone does not retain alpha when Remotion's default video
+    // pixel format is used. Pair its PNG frame capture with an alpha-capable
+    // output pixel format for the declared transparent asset.
+    argumentsForRender.push('--pixel-format=yuva444p10le');
+  }
+
   if (item.render.container === 'png-sequence') {
     argumentsForRender.push('--sequence');
   }

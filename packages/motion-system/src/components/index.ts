@@ -18,3 +18,9 @@ export {
   paintedLowerThirdSchema,
   type PaintedLowerThirdProps,
 } from "./PaintedLowerThird";
+export {
+  PopShowTitle,
+  popShowTitleDefaultProps,
+  popShowTitleSchema,
+  type PopShowTitleProps,
+} from "./PopShowTitle";

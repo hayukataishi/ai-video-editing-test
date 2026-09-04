@@ -87,6 +87,36 @@
         "diagram",
         "explainer"
       ]
+    },
+    {
+      "id": "show-title-bug",
+      "compositionId": "PopShowTitle",
+      "variant": "corner-bug",
+      "durationFrames": 900,
+      "props": {
+        "lines": [
+          "がんばれ!",
+          "はゆかしゃちょう!"
+        ],
+        "variant": "corner-bug",
+        "anchor": "top-left",
+        "showIntro": false
+      },
+      "render": {
+        "outputFile": "renders/remotion/show-title-bug.mov",
+        "container": "mov",
+        "codec": "prores",
+        "alpha": true,
+        "pixelFormat": "yuva444p10le",
+        "audio": false,
+        "proresProfile": "4444"
+      },
+      "description": "常時表示できる、透明背景の番組ロゴ調タイトル。配置はPalmierの編集意図で管理する。",
+      "tags": [
+        "title",
+        "show-branding",
+        "alpha"
+      ]
     }
   ],
   "metadata": {

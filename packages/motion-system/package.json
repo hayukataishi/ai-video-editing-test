@@ -8,7 +8,8 @@
     "./Root": "./src/Root.tsx",
     "./components/TitleCard": "./src/components/TitleCard.tsx",
     "./components/FlowDiagram": "./src/components/FlowDiagram.tsx",
-    "./components/PaintedLowerThird": "./src/components/PaintedLowerThird.tsx"
+    "./components/PaintedLowerThird": "./src/components/PaintedLowerThird.tsx",
+    "./components/PopShowTitle": "./src/components/PopShowTitle.tsx"
   },
   "scripts": {
     "studio": "remotion studio src/index.ts",
@@ -24,9 +25,10 @@
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "remotion": "4.0.520",
-    "zod": "4.5.4"
+    "zod": "4.4.3"
   },
   "devDependencies": {
+    "@remotion/cli": "4.0.520",
     "@storybook/react-vite": "10.6.0",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
