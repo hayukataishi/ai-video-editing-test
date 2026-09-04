@@ -12,3 +12,9 @@ export {
   type FlowDiagramNode,
   type FlowDiagramProps,
 } from "./FlowDiagram";
+export {
+  PaintedLowerThird,
+  paintedLowerThirdDefaultProps,
+  paintedLowerThirdSchema,
+  type PaintedLowerThirdProps,
+} from "./PaintedLowerThird";

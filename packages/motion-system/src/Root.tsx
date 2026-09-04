@@ -3,9 +3,12 @@ import { Composition } from "remotion";
 import {
   FlowDiagram,
   flowDiagramSchema,
+  PaintedLowerThird,
+  paintedLowerThirdSchema,
   TitleCard,
   titleCardSchema,
 } from "./components";
+import { motionSystemTheme } from "./theme";
 
 /** Registers the stable, publicly addressable Motion System compositions. */
 export const RemotionRoot = () => {
@@ -65,6 +68,31 @@ export const RemotionRoot = () => {
           accentColor: "#6ee7f9",
           connectorColor: "#7dd3fc",
           textColor: "#f8fafc",
+        }}
+      />
+      <Composition
+        id="PaintedLowerThird"
+        component={PaintedLowerThird}
+        durationInFrames={150}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={paintedLowerThirdSchema}
+        defaultProps={{
+          name: "山田 花子",
+          role: "俳優",
+          variant: "standard",
+          anchor: "bottom-left",
+          showOutro: true,
+          colors: {
+            mint: motionSystemTheme.colors.watercolorMint,
+            peach: motionSystemTheme.colors.watercolorPeach,
+            yellow: motionSystemTheme.colors.watercolorYellow,
+            name: motionSystemTheme.colors.charcoal,
+            nameOutline: motionSystemTheme.colors.paper,
+            roleSurface: motionSystemTheme.colors.paper,
+            roleText: motionSystemTheme.colors.charcoal,
+          },
         }}
       />
     </>

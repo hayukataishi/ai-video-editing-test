@@ -8,9 +8,15 @@ export const motionSystemTheme = {
     accentDeep: "#0284c7",
     connector: "#7dd3fc",
     success: "#86efac",
+    watercolorMint: "#CBE3D4",
+    watercolorPeach: "#FECCB7",
+    watercolorYellow: "#FFE7AC",
+    charcoal: "#4E4E4D",
   },
   fontFamily:
     '"Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Segoe UI", sans-serif',
+  fontFamilyRounded:
+    '"M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif',
 } as const;
 
 export type MotionSystemTheme = typeof motionSystemTheme;

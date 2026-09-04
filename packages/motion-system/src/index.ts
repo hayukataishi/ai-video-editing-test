@@ -3,6 +3,8 @@ import { registerRoot } from "remotion";
 import {
   flowDiagramDefaultProps,
   flowDiagramSchema,
+  paintedLowerThirdDefaultProps,
+  paintedLowerThirdSchema,
   titleCardDefaultProps,
   titleCardSchema,
 } from "./components";
@@ -28,6 +30,16 @@ export const compositionRegistry = {
     schema: flowDiagramSchema,
     defaultProps: flowDiagramDefaultProps,
     defaultDurationInFrames: 240,
+    fps: 30,
+    width: 1920,
+    height: 1080,
+  },
+  PaintedLowerThird: {
+    compositionId: "PaintedLowerThird",
+    kind: "video",
+    schema: paintedLowerThirdSchema,
+    defaultProps: paintedLowerThirdDefaultProps,
+    defaultDurationInFrames: 150,
     fps: 30,
     width: 1920,
     height: 1080,
