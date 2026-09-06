@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../packages/manifest/schemas/edit-manifest.schema.json",
+  "manifestType": "edit",
+  "schemaVersion": "1.0.0",
+  "projectId": "my-channel",
+  "episodeId": "ep-003",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {"numerator": 30, "denominator": 1},
+    "pixelAspectRatio": 1
+  },
+  "target": {
+    "palmierProject": "youtube",
+    "timeline": "Narration Selects",
+    "createIfMissing": false
+  },
+  "tracks": [
+    {
+      "id": "auto-graphics",
+      "kind": "video",
+      "role": "graphics",
+      "palmierName": "V2_AUTO_GRAPHICS",
+      "order": 20,
+      "managed": true,
+      "syncLock": false
+    },
+    {
+      "id": "voice",
+      "kind": "audio",
+      "role": "voice",
+      "palmierName": "Narration",
+      "order": 10,
+      "managed": false,
+      "syncLock": true
+    }
+  ],
+  "placements": [
+    {
+      "id": "place-manual-editing-bottleneck",
+      "source": {"type": "content", "ref": "manual-editing-bottleneck"},
+      "trackId": "auto-graphics",
+      "startFrame": 0,
+      "durationFrames": 202,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "ユーザー指定Range 00:00:00:00–00:00:06:22に一致する、人力編集の時間コストを示すパステル図解。"
+    }
+  ],
+  "markers": [
+    {
+      "id": "review-manual-editing-bottleneck",
+      "startFrame": 0,
+      "endFrame": 202,
+      "label": "人力編集の時間コスト",
+      "note": "作業カードと時計の加速を確認する。",
+      "managed": true
+    }
+  ],
+  "inspectionFrames": [0, 20, 57, 104, 154, 196],
+  "metadata": {
+    "title": "Pastel explainer — manual editing bottleneck",
+    "author": "動画制作基盤チーム",
+    "createdAt": "2026-09-06T00:00:00+09:00",
+    "timingSource": "User-specified Palmier range 00:00:00:00–00:00:06:22 at 30fps"
+  }
+}

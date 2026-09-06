@@ -12,6 +12,12 @@ export const motionSystemTheme = {
     watercolorPeach: "#FECCB7",
     watercolorYellow: "#FFE7AC",
     charcoal: "#4E4E4D",
+    pastelPaper: "#FFFDF9",
+    pastelInk: "#18324C",
+    pastelPink: "#F8CEDB",
+    pastelSky: "#CFE9FF",
+    pastelLavender: "#E1DAFF",
+    pastelLine: "#9DC3DD",
   },
   fontFamily:
     '"Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Segoe UI", sans-serif',

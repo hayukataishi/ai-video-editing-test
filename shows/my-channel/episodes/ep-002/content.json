@@ -1,0 +1,224 @@
+{
+  "$schema": "../../../../packages/manifest/schemas/content-manifest.schema.json",
+  "manifestType": "content",
+  "schemaVersion": "1.0.0",
+  "projectId": "my-channel",
+  "episodeId": "ep-002",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {
+      "numerator": 30,
+      "denominator": 1
+    },
+    "pixelAspectRatio": 1
+  },
+  "catalog": {
+    "package": "@studio/motion-system",
+    "revision": "workspace"
+  },
+  "themeId": "my-channel-default",
+  "items": [
+    {
+      "id": "toolchain-overview",
+      "compositionId": "FlowDiagram",
+      "variant": "three-stage",
+      "durationFrames": 428,
+      "props": {
+        "title": "解説動画は、3つの役割で作る",
+        "nodes": [
+          {
+            "id": "palmier",
+            "label": "Palmier Pro",
+            "caption": "編集・タイムライン",
+            "tone": "success"
+          },
+          {
+            "id": "remotion",
+            "label": "Remotion",
+            "caption": "図解アニメーション",
+            "tone": "accent"
+          },
+          {
+            "id": "codex",
+            "label": "Codex",
+            "caption": "設計・実装",
+            "tone": "neutral"
+          }
+        ],
+        "variant": "three-stage",
+        "backgroundColor": "#07111F",
+        "accentColor": "#8BA7FF",
+        "connectorColor": "#55D6BE",
+        "textColor": "#F7FAFF"
+      },
+      "render": {
+        "outputFile": "renders/remotion/toolchain-overview.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "Palmier Pro、Remotion、Codexの役割を比較するオープニング図解。",
+      "tags": ["overview", "explainer", "toolchain"]
+    },
+    {
+      "id": "palmier-role",
+      "compositionId": "ToolRoleShowcase",
+      "variant": "timeline",
+      "durationFrames": 794,
+      "props": {
+        "eyebrow": "PALMIER PRO",
+        "toolName": "Palmier Pro",
+        "role": "話す流れを、編集として仕上げる",
+        "description": "音声を並べ、不要な間をカットし、字幕、Bロール、図解を重ねながら、視聴者が見る最終的な流れを作ります。",
+        "visual": "timeline",
+        "steps": [
+          {"label": "音声", "detail": "話すリズム"},
+          {"label": "字幕", "detail": "理解を補助"},
+          {"label": "Bロール", "detail": "見せ場をつくる"},
+          {"label": "図解", "detail": "意味を可視化"}
+        ],
+        "beatFrames": [0, 232, 402, 552, 709, 780],
+        "backgroundColor": "#07111F",
+        "accentColor": "#55D6BE",
+        "secondaryColor": "#8BA7FF",
+        "textColor": "#F7FAFF"
+      },
+      "render": {
+        "outputFile": "renders/remotion/palmier-role.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "編集タイムラインの各レイヤーが段階的に働くことを示す図解。",
+      "tags": ["palmier", "timeline", "explainer"]
+    },
+    {
+      "id": "remotion-role",
+      "compositionId": "ToolRoleShowcase",
+      "variant": "network",
+      "durationFrames": 1052,
+      "props": {
+        "eyebrow": "REMOTION",
+        "toolName": "Remotion",
+        "role": "複雑な関係を、動く図解にする",
+        "description": "数字が伸びるグラフや複数要素が連動する図、ブランドらしい演出を、再利用できるフレーム駆動のアニメーションとして実装します。",
+        "visual": "network",
+        "steps": [
+          {"label": "ユーザー", "detail": "利用が増える"},
+          {"label": "紹介", "detail": "次の人へ広がる"},
+          {"label": "成長", "detail": "循環が加速する"}
+        ],
+        "beatFrames": [0, 117, 357, 574, 716, 866, 1004],
+        "backgroundColor": "#07111F",
+        "accentColor": "#8BA7FF",
+        "secondaryColor": "#55D6BE",
+        "textColor": "#F7FAFF"
+      },
+      "render": {
+        "outputFile": "renders/remotion/remotion-role.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "ユーザー、紹介、成長の因果関係を連動表示する図解。",
+      "tags": ["remotion", "network", "explainer"]
+    },
+    {
+      "id": "codex-role",
+      "compositionId": "ToolRoleShowcase",
+      "variant": "pipeline",
+      "durationFrames": 862,
+      "props": {
+        "eyebrow": "CODEX",
+        "toolName": "Codex",
+        "role": "意図を設計して、実装へつなぐ",
+        "description": "台本と音声から視覚化すべき部分を整理し、図解案、Remotionの部品、色、文字、タイミングをひとつの制作フローへつなげます。",
+        "visual": "pipeline",
+        "steps": [
+          {"label": "台本・音声", "detail": "伝える順番を読む"},
+          {"label": "図解案", "detail": "見せ方を決める"},
+          {"label": "Remotion", "detail": "動きを実装する"},
+          {"label": "タイムライン", "detail": "尺に合わせて配置する"}
+        ],
+        "beatFrames": [0, 208, 390, 490, 632, 848],
+        "backgroundColor": "#07111F",
+        "accentColor": "#55D6BE",
+        "secondaryColor": "#8BA7FF",
+        "textColor": "#F7FAFF"
+      },
+      "render": {
+        "outputFile": "renders/remotion/codex-role.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "台本と音声からタイムライン配置までをつなぐ設計フロー。",
+      "tags": ["codex", "pipeline", "explainer"]
+    },
+    {
+      "id": "production-workflow",
+      "compositionId": "FlowDiagram",
+      "variant": "compact",
+      "durationFrames": 910,
+      "props": {
+        "title": "制作は、この順番でつなぐ",
+        "nodes": [
+          {"id": "edit", "label": "編集", "tone": "success"},
+          {"id": "design", "label": "図解設計", "tone": "accent"},
+          {"id": "motion", "label": "モーション", "tone": "accent"},
+          {"id": "place", "label": "配置", "tone": "neutral"},
+          {"id": "finish", "label": "仕上げ", "tone": "success"}
+        ],
+        "variant": "compact",
+        "backgroundColor": "#07111F",
+        "accentColor": "#8BA7FF",
+        "connectorColor": "#55D6BE",
+        "textColor": "#F7FAFF"
+      },
+      "render": {
+        "outputFile": "renders/remotion/production-workflow.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "編集から仕上げまでの5段階を示す制作フロー。",
+      "tags": ["workflow", "diagram", "explainer"]
+    },
+    {
+      "id": "toolchain-summary",
+      "compositionId": "TitleCard",
+      "variant": "minimal",
+      "durationFrames": 690,
+      "props": {
+        "title": "編集 × アニメーション × AI支援",
+        "subtitle": "Palmier Pro / Remotion / Codex\n理解しやすく、あとから直しやすい解説動画へ",
+        "eyebrow": "TOOLCHAIN SUMMARY",
+        "variant": "minimal",
+        "backgroundColor": "#07111F",
+        "accentColor": "#55D6BE",
+        "textColor": "#F7FAFF"
+      },
+      "render": {
+        "outputFile": "renders/remotion/toolchain-summary.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "3ツールの役割をまとめる結論カード。",
+      "tags": ["summary", "title", "explainer"]
+    }
+  ],
+  "metadata": {
+    "title": "Palmier Pro + Remotion + Codex 解説グラフィック",
+    "author": "動画制作基盤チーム",
+    "createdAt": "2026-09-06T00:00:00+09:00",
+    "sourceTiming": "Palmier Pro project youtube / timeline Narration Selects, 30fps, silence-cut audio"
+  }
+}

@@ -24,3 +24,18 @@ export {
   popShowTitleSchema,
   type PopShowTitleProps,
 } from "./PopShowTitle";
+export {
+  ToolRoleShowcase,
+  toolRoleShowcaseDefaultProps,
+  toolRoleShowcaseSchema,
+  toolRoleStepSchema,
+  type ToolRoleShowcaseProps,
+  type ToolRoleStep,
+} from "./ToolRoleShowcase";
+export {
+  ManualEditingBottleneck,
+  manualEditingBottleneckDefaultProps,
+  manualEditingBottleneckSchema,
+  type ManualEditingBottleneckPalette,
+  type ManualEditingBottleneckProps,
+} from "./ManualEditingBottleneck";

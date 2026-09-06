@@ -1,0 +1,54 @@
+{
+  "$schema": "../../../../packages/manifest/schemas/content-manifest.schema.json",
+  "manifestType": "content",
+  "schemaVersion": "1.0.0",
+  "projectId": "my-channel",
+  "episodeId": "ep-003",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {"numerator": 30, "denominator": 1},
+    "pixelAspectRatio": 1
+  },
+  "catalog": {
+    "package": "@studio/motion-system",
+    "revision": "workspace"
+  },
+  "themeId": "my-channel-default",
+  "items": [
+    {
+      "id": "manual-editing-bottleneck",
+      "compositionId": "ManualEditingBottleneck",
+      "variant": "pastel-workflow",
+      "durationFrames": 202,
+      "props": {
+        "headline": "解説動画を\n動画編集ソフトだけで作ると…",
+        "softwareLabel": "動画編集ソフト",
+        "tasks": [
+          "台本を読む",
+          "素材を探す",
+          "図をつくる",
+          "タイミング調整",
+          "修正を重ねる"
+        ],
+        "conclusion": "手作業が積み上がって、\n時間がめっちゃかかる",
+        "showOutro": false
+      },
+      "render": {
+        "outputFile": "renders/remotion/manual-editing-bottleneck.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "動画編集ソフトだけでの人力制作で作業と時間が積み上がることを示す、明るいパステル調の図解。",
+      "tags": ["pastel", "explainer", "manual-workflow", "editing"]
+    }
+  ],
+  "metadata": {
+    "title": "Pastel explainer graphics — manual editing bottleneck",
+    "author": "動画制作基盤チーム",
+    "createdAt": "2026-09-06T00:00:00+09:00",
+    "sourceTiming": "User-specified Palmier range 00:00:00:00–00:00:06:22 at 30fps"
+  }
+}

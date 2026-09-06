@@ -9,7 +9,9 @@
     "./components/TitleCard": "./src/components/TitleCard.tsx",
     "./components/FlowDiagram": "./src/components/FlowDiagram.tsx",
     "./components/PaintedLowerThird": "./src/components/PaintedLowerThird.tsx",
-    "./components/PopShowTitle": "./src/components/PopShowTitle.tsx"
+    "./components/PopShowTitle": "./src/components/PopShowTitle.tsx",
+    "./components/ToolRoleShowcase": "./src/components/ToolRoleShowcase.tsx",
+    "./components/ManualEditingBottleneck": "./src/components/ManualEditingBottleneck.tsx"
   },
   "scripts": {
     "studio": "remotion studio src/index.ts",

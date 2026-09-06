@@ -1,0 +1,131 @@
+{
+  "$schema": "../../../../packages/manifest/schemas/edit-manifest.schema.json",
+  "manifestType": "edit",
+  "schemaVersion": "1.0.0",
+  "projectId": "my-channel",
+  "episodeId": "ep-002",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {
+      "numerator": 30,
+      "denominator": 1
+    },
+    "pixelAspectRatio": 1
+  },
+  "target": {
+    "palmierProject": "youtube",
+    "timeline": "Narration Selects",
+    "createIfMissing": false
+  },
+  "tracks": [
+    {
+      "id": "auto-graphics",
+      "kind": "video",
+      "role": "graphics",
+      "palmierName": "Graphics",
+      "order": 20,
+      "managed": true,
+      "syncLock": false
+    },
+    {
+      "id": "voice",
+      "kind": "audio",
+      "role": "voice",
+      "palmierName": "Narration",
+      "order": 10,
+      "managed": false,
+      "syncLock": true
+    }
+  ],
+  "placements": [
+    {
+      "id": "place-toolchain-overview",
+      "source": {"type": "content", "ref": "toolchain-overview"},
+      "trackId": "auto-graphics",
+      "startFrame": 0,
+      "durationFrames": 428,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "Palmierの実音声フレーム0–427に一致するオープニング図解。"
+    },
+    {
+      "id": "place-palmier-role",
+      "source": {"type": "content", "ref": "palmier-role"},
+      "trackId": "auto-graphics",
+      "startFrame": 428,
+      "durationFrames": 794,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "Palmierの実音声フレーム428–1221に一致する編集タイムライン図解。"
+    },
+    {
+      "id": "place-remotion-role",
+      "source": {"type": "content", "ref": "remotion-role"},
+      "trackId": "auto-graphics",
+      "startFrame": 1222,
+      "durationFrames": 1052,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "Palmierの実音声フレーム1222–2273に一致する要素連動図解。"
+    },
+    {
+      "id": "place-codex-role",
+      "source": {"type": "content", "ref": "codex-role"},
+      "trackId": "auto-graphics",
+      "startFrame": 2274,
+      "durationFrames": 862,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "Palmierの実音声フレーム2274–3135に一致する設計・実装フロー。"
+    },
+    {
+      "id": "place-production-workflow",
+      "source": {"type": "content", "ref": "production-workflow"},
+      "trackId": "auto-graphics",
+      "startFrame": 3136,
+      "durationFrames": 910,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "Palmierの実音声フレーム3136–4045に一致する5段階の制作フロー。"
+    },
+    {
+      "id": "place-toolchain-summary",
+      "source": {"type": "content", "ref": "toolchain-summary"},
+      "trackId": "auto-graphics",
+      "startFrame": 4046,
+      "durationFrames": 690,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "Palmierの実音声フレーム4046–4735に一致する結論カード。"
+    }
+  ],
+  "markers": [
+    {"id": "review-overview", "startFrame": 0, "endFrame": 428, "label": "3ツールの役割", "managed": true},
+    {"id": "review-palmier", "startFrame": 428, "endFrame": 1222, "label": "Palmier Pro 編集図解", "managed": true},
+    {"id": "review-remotion", "startFrame": 1222, "endFrame": 2274, "label": "Remotion 連動図解", "managed": true},
+    {"id": "review-codex", "startFrame": 2274, "endFrame": 3136, "label": "Codex 設計フロー", "managed": true},
+    {"id": "review-workflow", "startFrame": 3136, "endFrame": 4046, "label": "制作ワークフロー", "managed": true},
+    {"id": "review-summary", "startFrame": 4046, "endFrame": 4736, "label": "まとめ", "managed": true}
+  ],
+  "inspectionFrames": [
+    0, 245, 400,
+    434, 660, 830, 980, 1137, 1208,
+    1225, 1339, 1579, 1796, 1938, 2088, 2226,
+    2288, 2482, 2664, 2764, 2906, 3122,
+    3144, 3192, 3302, 3461, 3517, 3636, 3818, 4028,
+    4056, 4131, 4211, 4276, 4380, 4510, 4585, 4722
+  ],
+  "metadata": {
+    "title": "Palmier Pro + Remotion + Codex 編集意図",
+    "author": "動画制作基盤チーム",
+    "createdAt": "2026-09-06T00:00:00+09:00",
+    "timingSource": "Palmier Pro timeline Narration Selects, read at 30fps after silence cuts"
+  }
+}

@@ -2,6 +2,9 @@ import { Composition } from "remotion";
 
 import {
   FlowDiagram,
+  ManualEditingBottleneck,
+  manualEditingBottleneckDefaultProps,
+  manualEditingBottleneckSchema,
   flowDiagramSchema,
   PaintedLowerThird,
   paintedLowerThirdSchema,
@@ -10,6 +13,9 @@ import {
   popShowTitleSchema,
   TitleCard,
   titleCardSchema,
+  ToolRoleShowcase,
+  toolRoleShowcaseDefaultProps,
+  toolRoleShowcaseSchema,
 } from "./components";
 import { motionSystemTheme } from "./theme";
 
@@ -107,6 +113,26 @@ export const RemotionRoot = () => {
         height={1080}
         schema={popShowTitleSchema}
         defaultProps={popShowTitleDefaultProps}
+      />
+      <Composition
+        id="ToolRoleShowcase"
+        component={ToolRoleShowcase}
+        durationInFrames={360}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={toolRoleShowcaseSchema}
+        defaultProps={toolRoleShowcaseDefaultProps}
+      />
+      <Composition
+        id="ManualEditingBottleneck"
+        component={ManualEditingBottleneck}
+        durationInFrames={202}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={manualEditingBottleneckSchema}
+        defaultProps={manualEditingBottleneckDefaultProps}
       />
     </>
   );
