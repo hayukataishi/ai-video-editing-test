@@ -46,6 +46,39 @@
       "layout": {"preset": "full-frame", "opacity": 1},
       "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
       "notes": "ユーザー指定Range 00:00:00:00–00:00:06:22に一致する、人力編集の時間コストを示すパステル図解。"
+    },
+    {
+      "id": "place-three-tool-video-workflow",
+      "source": {"type": "content", "ref": "three-tool-video-workflow"},
+      "trackId": "auto-graphics",
+      "startFrame": 202,
+      "durationFrames": 226,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "ユーザー指定Range 00:00:06:22–00:00:14:08に一致する、3ツールを組み合わせたAI動画制作フローのパステル図解。"
+    },
+    {
+      "id": "place-palmier-editing-workflow",
+      "source": {"type": "content", "ref": "palmier-editing-workflow"},
+      "trackId": "auto-graphics",
+      "startFrame": 429,
+      "durationFrames": 359,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "ユーザー指定Range 00:00:14:09–00:00:26:08に一致する、Palmier Proで音声・無音カット・字幕・素材を完成動画へまとめるパステル図解。"
+    },
+    {
+      "id": "place-caption-diagram-placement",
+      "source": {"type": "content", "ref": "caption-diagram-placement"},
+      "trackId": "auto-graphics",
+      "startFrame": 789,
+      "durationFrames": 433,
+      "sourceInFrame": 0,
+      "layout": {"preset": "full-frame", "opacity": 1},
+      "sync": {"policy": "placement-only", "allowOverwrite": false, "preservePalmierEffects": true},
+      "notes": "ユーザー指定Range 00:00:26:09–00:00:40:22に一致する、話し手の要点から字幕・図解の挿入位置と修正しやすいテロップへつなぐパステル図解。"
     }
   ],
   "markers": [
@@ -56,13 +89,37 @@
       "label": "人力編集の時間コスト",
       "note": "作業カードと時計の加速を確認する。",
       "managed": true
+    },
+    {
+      "id": "review-three-tool-video-workflow",
+      "startFrame": 202,
+      "endFrame": 428,
+      "label": "3ツールでつくるAI動画制作フロー",
+      "note": "3つの役割カード、接続、最終アウトプットの可読性を確認する。",
+      "managed": true
+    },
+    {
+      "id": "review-palmier-editing-workflow",
+      "startFrame": 429,
+      "endFrame": 788,
+      "label": "Palmier Proの編集フロー",
+      "note": "音声、無音カット、字幕、Bロール・図解が順に統合され、最終的な流れへ到達することを確認する。",
+      "managed": true
+    },
+    {
+      "id": "review-caption-diagram-placement",
+      "startFrame": 789,
+      "endFrame": 1222,
+      "label": "字幕と図解の配置判断",
+      "note": "話し手の要点、字幕、3項目の図解、タイムライン上の挿入位置と編集しやすいテキストの可読性を確認する。",
+      "managed": true
     }
   ],
-  "inspectionFrames": [0, 20, 57, 104, 154, 196],
+  "inspectionFrames": [0, 20, 57, 104, 154, 196, 202, 222, 260, 310, 360, 404, 422, 429, 453, 510, 575, 646, 716, 780, 789, 830, 900, 960, 1010, 1065, 1132, 1206],
   "metadata": {
-    "title": "Pastel explainer — manual editing bottleneck",
+    "title": "Pastel explainer — editable diagram workflow",
     "author": "動画制作基盤チーム",
     "createdAt": "2026-09-06T00:00:00+09:00",
-    "timingSource": "User-specified Palmier range 00:00:00:00–00:00:06:22 at 30fps"
+    "timingSource": "User-specified Palmier ranges 00:00:00:00–00:00:06:22, 00:00:06:22–00:00:14:08, 00:00:14:09–00:00:26:08, and 00:00:26:09–00:00:40:22 at 30fps"
   }
 }

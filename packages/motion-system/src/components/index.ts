@@ -39,3 +39,30 @@ export {
   type ManualEditingBottleneckPalette,
   type ManualEditingBottleneckProps,
 } from "./ManualEditingBottleneck";
+export {
+  ThreeToolVideoWorkflow,
+  threeToolVideoWorkflowDefaultProps,
+  threeToolVideoWorkflowSchema,
+  threeToolWorkflowToolSchema,
+  type ThreeToolVideoWorkflowProps,
+  type ThreeToolWorkflowPalette,
+  type ThreeToolWorkflowTool,
+} from "./ThreeToolVideoWorkflow";
+export {
+  PalmierEditingWorkflow,
+  palmierEditingStageSchema,
+  palmierEditingWorkflowDefaultProps,
+  palmierEditingWorkflowSchema,
+  type PalmierEditingStage,
+  type PalmierEditingWorkflowPalette,
+  type PalmierEditingWorkflowProps,
+} from "./PalmierEditingWorkflow";
+export {
+  CaptionDiagramPlacement,
+  captionDiagramItemSchema,
+  captionDiagramPlacementDefaultProps,
+  captionDiagramPlacementSchema,
+  type CaptionDiagramItem,
+  type CaptionDiagramPalette,
+  type CaptionDiagramPlacementProps,
+} from "./CaptionDiagramPlacement";

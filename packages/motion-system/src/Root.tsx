@@ -16,6 +16,15 @@ import {
   ToolRoleShowcase,
   toolRoleShowcaseDefaultProps,
   toolRoleShowcaseSchema,
+  ThreeToolVideoWorkflow,
+  threeToolVideoWorkflowDefaultProps,
+  threeToolVideoWorkflowSchema,
+  PalmierEditingWorkflow,
+  palmierEditingWorkflowDefaultProps,
+  palmierEditingWorkflowSchema,
+  CaptionDiagramPlacement,
+  captionDiagramPlacementDefaultProps,
+  captionDiagramPlacementSchema,
 } from "./components";
 import { motionSystemTheme } from "./theme";
 
@@ -133,6 +142,36 @@ export const RemotionRoot = () => {
         height={1080}
         schema={manualEditingBottleneckSchema}
         defaultProps={manualEditingBottleneckDefaultProps}
+      />
+      <Composition
+        id="ThreeToolVideoWorkflow"
+        component={ThreeToolVideoWorkflow}
+        durationInFrames={226}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={threeToolVideoWorkflowSchema}
+        defaultProps={threeToolVideoWorkflowDefaultProps}
+      />
+      <Composition
+        id="PalmierEditingWorkflow"
+        component={PalmierEditingWorkflow}
+        durationInFrames={359}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={palmierEditingWorkflowSchema}
+        defaultProps={palmierEditingWorkflowDefaultProps}
+      />
+      <Composition
+        id="CaptionDiagramPlacement"
+        component={CaptionDiagramPlacement}
+        durationInFrames={433}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={captionDiagramPlacementSchema}
+        defaultProps={captionDiagramPlacementDefaultProps}
       />
     </>
   );

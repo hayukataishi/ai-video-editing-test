@@ -43,12 +43,96 @@
       },
       "description": "動画編集ソフトだけでの人力制作で作業と時間が積み上がることを示す、明るいパステル調の図解。",
       "tags": ["pastel", "explainer", "manual-workflow", "editing"]
+    },
+    {
+      "id": "three-tool-video-workflow",
+      "compositionId": "ThreeToolVideoWorkflow",
+      "variant": "pastel-workflow",
+      "durationFrames": 226,
+      "props": {
+        "headline": "3つのツールを組み合わせて\nAIで、わかりやすい動画制作へ",
+        "tools": [
+          {"id": "palmier-pro", "label": "Palmier Pro", "role": "編集を整える", "tone": "sky", "kind": "editing"},
+          {"id": "remotion", "label": "Remotion", "role": "図解を動かす", "tone": "pink", "kind": "animation"},
+          {"id": "codex", "label": "Codex", "role": "AIで流れを設計", "tone": "mint", "kind": "ai"}
+        ],
+        "outputLabel": "わかりやすい解説動画",
+        "summary": "編集 × AI支援 × アニメーション",
+        "showOutro": false
+      },
+      "render": {
+        "outputFile": "renders/remotion/three-tool-video-workflow.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "Palmier Pro、Remotion、Codexを組み合わせ、AIを活かしたわかりやすい動画制作の流れを示す明るいパステル調の図解。",
+      "tags": ["pastel", "explainer", "ai-workflow", "tool-triad"]
+    },
+    {
+      "id": "palmier-editing-workflow",
+      "compositionId": "PalmierEditingWorkflow",
+      "variant": "pastel-workflow",
+      "durationFrames": 359,
+      "props": {
+        "headline": "Palmier Proは、動画を完成させる\n編集の中心",
+        "stages": [
+          {"label": "音声", "detail": "ナレーションを並べる", "tone": "pink"},
+          {"label": "テンポ", "detail": "無音をカットする", "tone": "yellow"},
+          {"label": "字幕", "detail": "理解を補助する", "tone": "sky"},
+          {"label": "素材", "detail": "Bロール・画像を重ねる", "tone": "mint"}
+        ],
+        "outcomeLabel": "視聴者が見る、最終的な流れへ",
+        "summary": "音声・字幕・Bロール・図解を、ひとつのタイムラインで整える",
+        "showOutro": false
+      },
+      "render": {
+        "outputFile": "renders/remotion/palmier-editing-workflow.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "Palmier Proで音声、無音カット、字幕、Bロール・図解を一つのタイムラインに統合し、視聴者が見る流れを仕上げる明るいパステル調の図解。",
+      "tags": ["pastel", "explainer", "palmier-pro", "editing-workflow", "timeline"]
+    },
+    {
+      "id": "caption-diagram-placement",
+      "compositionId": "CaptionDiagramPlacement",
+      "variant": "pastel-workflow",
+      "durationFrames": 433,
+      "props": {
+        "headline": "話した内容を、\n字幕と図解に変える",
+        "editorLabel": "Palmier Pro",
+        "speakerLabel": "話し手のひと言",
+        "spokenQuote": "「売上が伸びた理由は\n3つあります」",
+        "captionText": "売上が伸びた理由は3つ",
+        "diagramTitle": "3つの理由を、図解で見せる",
+        "diagramItems": [
+          {"label": "理由 1", "detail": "ポイントを整理", "tone": "pink"},
+          {"label": "理由 2", "detail": "順番に伝える", "tone": "sky"},
+          {"label": "理由 3", "detail": "理解を補助", "tone": "mint"}
+        ],
+        "insertionLabel": "ここに図解を入れる",
+        "editabilityLabel": "短いテロップは、あとから直しやすい",
+        "showOutro": false
+      },
+      "render": {
+        "outputFile": "renders/remotion/caption-diagram-placement.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false
+      },
+      "description": "話し手の要点を字幕にし、その直後に3項目の図解を置く編集判断と、短いテロップの修正しやすさを示す明るいパステル調の図解。",
+      "tags": ["pastel", "explainer", "caption", "diagram", "editing-workflow"]
     }
   ],
   "metadata": {
-    "title": "Pastel explainer graphics — manual editing bottleneck",
+    "title": "Pastel explainer graphics — editable diagram workflow",
     "author": "動画制作基盤チーム",
     "createdAt": "2026-09-06T00:00:00+09:00",
-    "sourceTiming": "User-specified Palmier range 00:00:00:00–00:00:06:22 at 30fps"
+    "sourceTiming": "User-specified Palmier ranges 00:00:00:00–00:00:06:22, 00:00:06:22–00:00:14:08, 00:00:14:09–00:00:26:08, and 00:00:26:09–00:00:40:22 at 30fps"
   }
 }
