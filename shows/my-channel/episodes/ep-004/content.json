@@ -20,7 +20,25 @@
   "themeId": "my-channel-default",
   "metadata": {
     "title": "音声から、説明に合う図解アニメーションへ",
-    "revision": "semantic-concrete-scenes-v2"
+    "revision": "semantic-concrete-scenes-v2",
+    "youtubeThumbnail": {
+      "contentId": "youtube-production-thumbnail",
+      "stillExports": [
+        {
+          "outputFile": "renders/youtube/thumbnail.png",
+          "width": 3840,
+          "height": 2160,
+          "frame": 0
+        },
+        {
+          "outputFile": "renders/youtube/thumbnail-1280.jpg",
+          "width": 1280,
+          "height": 720,
+          "frame": 0
+        }
+      ],
+      "copyFile": "publishing/youtube.md"
+    }
   },
   "items": [
     {
@@ -676,6 +694,39 @@
         "pastel",
         "semantic-explainer",
         "narration-synced"
+      ]
+    },
+    {
+      "id": "youtube-production-thumbnail",
+      "compositionId": "ProductionThumbnail",
+      "durationFrames": 1,
+      "props": {
+        "eyebrow": "この動画も、3ツールだけで制作",
+        "firstLine": "動画編集も",
+        "secondLine": "図解も、",
+        "lastLine": "チャットで。",
+        "inputLabel": "音声",
+        "outputLabel": "図解つき動画",
+        "tools": [
+          "Palmier Pro",
+          "Remotion",
+          "Codex"
+        ],
+        "accent": "pink"
+      },
+      "render": {
+        "outputFile": "renders/youtube/thumbnail-source.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "YouTube用の静止サムネイル。ユーザー指定でRemotionを使用。大きな3行の見出しと音声→図解の変換図。既存パイプライン用の1フレーム素材に加え、同じpropsからPNG/JPEGを直接書き出す。タイムライン配置は行わない。",
+      "tags": [
+        "thumbnail",
+        "youtube",
+        "pastel"
       ]
     }
   ]

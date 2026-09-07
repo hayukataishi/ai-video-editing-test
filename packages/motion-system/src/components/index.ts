@@ -74,3 +74,5 @@ export {
   type CaptionDiagramPalette,
   type CaptionDiagramPlacementProps,
 } from "./CaptionDiagramPlacement";
+
+export {ProductionThumbnail, productionThumbnailSchema, productionThumbnailDefaultProps, type ProductionThumbnailProps} from "./ProductionThumbnail";

@@ -46,7 +46,7 @@
         "ref": "semantic-post-production-collapse"
       },
       "trackId": "auto-graphics",
-      "startFrame": 300,
+      "startFrame": 180,
       "durationFrames": 348,
       "sourceInFrame": 0,
       "layout": {
@@ -67,7 +67,7 @@
         "ref": "semantic-audio-to-explainer-pipeline"
       },
       "trackId": "auto-graphics",
-      "startFrame": 648,
+      "startFrame": 528,
       "durationFrames": 255,
       "sourceInFrame": 0,
       "layout": {
@@ -88,7 +88,7 @@
         "ref": "semantic-ai-editor-handoff"
       },
       "trackId": "auto-graphics",
-      "startFrame": 903,
+      "startFrame": 783,
       "durationFrames": 378,
       "sourceInFrame": 0,
       "layout": {
@@ -109,7 +109,7 @@
         "ref": "semantic-waveform-surgery"
       },
       "trackId": "auto-graphics",
-      "startFrame": 1281,
+      "startFrame": 1161,
       "durationFrames": 308,
       "sourceInFrame": 0,
       "layout": {
@@ -130,7 +130,7 @@
         "ref": "semantic-conversational-timeline-revision"
       },
       "trackId": "auto-graphics",
-      "startFrame": 1589,
+      "startFrame": 1469,
       "durationFrames": 514,
       "sourceInFrame": 0,
       "layout": {
@@ -151,7 +151,7 @@
         "ref": "semantic-code-becomes-visual-forms"
       },
       "trackId": "auto-graphics",
-      "startFrame": 2103,
+      "startFrame": 1983,
       "durationFrames": 294,
       "sourceInFrame": 0,
       "layout": {
@@ -172,7 +172,7 @@
         "ref": "semantic-prompt-to-render"
       },
       "trackId": "auto-graphics",
-      "startFrame": 2397,
+      "startFrame": 2277,
       "durationFrames": 212,
       "sourceInFrame": 0,
       "layout": {
@@ -193,7 +193,7 @@
         "ref": "semantic-referral-growth-flywheel"
       },
       "trackId": "auto-graphics",
-      "startFrame": 2609,
+      "startFrame": 2489,
       "durationFrames": 408,
       "sourceInFrame": 0,
       "layout": {
@@ -214,7 +214,7 @@
         "ref": "semantic-speech-to-storyboard"
       },
       "trackId": "auto-graphics",
-      "startFrame": 3017,
+      "startFrame": 2897,
       "durationFrames": 342,
       "sourceInFrame": 0,
       "layout": {
@@ -235,7 +235,7 @@
         "ref": "semantic-command-router-to-edit"
       },
       "trackId": "auto-graphics",
-      "startFrame": 3359,
+      "startFrame": 3239,
       "durationFrames": 410,
       "sourceInFrame": 0,
       "layout": {
@@ -256,7 +256,7 @@
         "ref": "semantic-generate-and-place-at-the-spoken-beat"
       },
       "trackId": "auto-graphics",
-      "startFrame": 3769,
+      "startFrame": 3649,
       "durationFrames": 461,
       "sourceInFrame": 0,
       "layout": {
@@ -277,7 +277,7 @@
         "ref": "semantic-one-chat-revisions"
       },
       "trackId": "auto-graphics",
-      "startFrame": 4230,
+      "startFrame": 4110,
       "durationFrames": 424,
       "sourceInFrame": 0,
       "layout": {
@@ -298,7 +298,7 @@
         "ref": "semantic-production-steps-one-and-two"
       },
       "trackId": "auto-graphics",
-      "startFrame": 4654,
+      "startFrame": 4534,
       "durationFrames": 564,
       "sourceInFrame": 0,
       "layout": {
@@ -319,7 +319,7 @@
         "ref": "semantic-audio-is-the-timing-ruler"
       },
       "trackId": "auto-graphics",
-      "startFrame": 5218,
+      "startFrame": 5098,
       "durationFrames": 587,
       "sourceInFrame": 0,
       "layout": {
@@ -340,7 +340,7 @@
         "ref": "semantic-chat-powered-production-conveyor"
       },
       "trackId": "auto-graphics",
-      "startFrame": 5805,
+      "startFrame": 5685,
       "durationFrames": 331,
       "sourceInFrame": 0,
       "layout": {
@@ -361,7 +361,7 @@
         "ref": "semantic-three-role-finish"
       },
       "trackId": "auto-graphics",
-      "startFrame": 6136,
+      "startFrame": 6016,
       "durationFrames": 641,
       "sourceInFrame": 0,
       "layout": {
@@ -380,87 +380,88 @@
     0,
     60,
     120,
+    160,
+    179,
+    180,
+    210,
     270,
-    299,
-    300,
+    354,
     390,
-    474,
-    510,
-    637,
-    743,
-    775,
-    823,
-    892,
+    517,
+    623,
+    655,
+    703,
+    772,
+    883,
+    972,
     1003,
-    1092,
-    1123,
-    1270,
-    1411,
-    1434,
-    1511,
-    1578,
-    1704,
-    1845,
-    1879,
-    2092,
-    2248,
-    2250,
-    2298,
-    2386,
-    2462,
-    2503,
-    2532,
-    2598,
-    2699,
-    2784,
-    2800,
-    2929,
-    3006,
-    3102,
-    3188,
-    3192,
-    3348,
-    3489,
-    3560,
-    3629,
-    3758,
-    3939,
-    4005,
-    4113,
-    4159,
-    4219,
-    4410,
-    4430,
-    4500,
-    4643,
-    4772,
-    4920,
-    4946,
-    5076,
-    5207,
-    5218,
-    5328,
-    5468,
-    5568,
-    5638,
-    5716,
-    5755,
-    5793,
-    5804,
-    5931,
-    6010,
-    6020,
-    6125,
+    1150,
+    1291,
+    1314,
+    1391,
+    1458,
+    1584,
+    1725,
+    1759,
+    1972,
+    2128,
+    2130,
+    2178,
+    2266,
+    2342,
+    2383,
+    2412,
+    2478,
+    2579,
+    2664,
+    2680,
+    2809,
+    2886,
+    2982,
+    3068,
+    3072,
+    3228,
+    3369,
+    3440,
+    3509,
+    3638,
+    3819,
+    3885,
+    3993,
+    4039,
+    4099,
+    4290,
+    4310,
+    4380,
+    4523,
+    4652,
+    4800,
+    4826,
+    4956,
+    5087,
+    5098,
+    5208,
+    5348,
+    5448,
+    5518,
+    5596,
+    5635,
+    5673,
+    5684,
+    5811,
+    5890,
+    5900,
+    6005,
+    6016,
     6136,
-    6256,
-    6414,
-    6516,
-    6606,
-    6638,
-    6673,
-    6716,
-    6766,
-    6776
+    6294,
+    6396,
+    6486,
+    6518,
+    6553,
+    6596,
+    6646,
+    6656
   ],
   "metadata": {
     "revision": "semantic-concrete-scenes-v2",
@@ -469,20 +470,20 @@
       {
         "id": "this-video-production-note",
         "startFrame": 0,
-        "durationFrames": 300,
+        "durationFrames": 180,
         "title": "この動画の説明",
         "implementation": "Palmier editable native text over a #FFFDF9 matte. Existing bright pastel theme.",
         "background": {
           "hex": "#FFFDF9",
           "trackId": "auto-graphics",
           "startFrame": 0,
-          "endFrame": 300
+          "endFrame": 180
         },
         "texts": [
           {
             "content": "この動画の説明",
             "startFrame": 0,
-            "endFrame": 300,
+            "endFrame": 180,
             "animation": "off",
             "style": {
               "fontName": "Hiragino Maru Gothic ProN",
@@ -509,7 +510,7 @@
           {
             "content": "この解説動画は、",
             "startFrame": 12,
-            "endFrame": 300,
+            "endFrame": 180,
             "animation": "off",
             "style": {
               "fontName": "Hiragino Maru Gothic ProN",
@@ -536,7 +537,7 @@
           {
             "content": "Palmier Pro  ＋  Remotion  ＋  Codex",
             "startFrame": 24,
-            "endFrame": 300,
+            "endFrame": 180,
             "animation": "off",
             "style": {
               "fontName": "Hiragino Maru Gothic ProN",
@@ -570,7 +571,7 @@
           {
             "content": "この3つのツールだけで制作しています。",
             "startFrame": 58,
-            "endFrame": 300,
+            "endFrame": 180,
             "animation": "off",
             "style": {
               "fontName": "Hiragino Maru Gothic ProN",
@@ -597,7 +598,7 @@
           {
             "content": "使用モデル：GPT-6 Astra（極高）",
             "startFrame": 84,
-            "endFrame": 300,
+            "endFrame": 180,
             "animation": "off",
             "style": {
               "fontName": "Hiragino Maru Gothic ProN",
@@ -631,7 +632,7 @@
         ],
         "fadeInFrames": 10,
         "fadeOutFrames": 10,
-        "narration": "Text-only introductory card; original narration begins at frame 300.",
+        "narration": "Text-only introductory card; original narration begins at frame 180.",
         "userProvidedFacts": [
           "Palmier Pro + Remotion + Codexのみで制作した解説動画",
           "使用モデル：GPT-6 Astra（極高）"
@@ -645,7 +646,7 @@
         ]
       }
     ],
-    "bodyOffsetFrames": 300,
-    "bodyShiftAuthorization": "One-time user request to prepend this introductory scene; move all existing clips +300 frames without ripple."
+    "bodyOffsetFrames": 180,
+    "bodyShiftAuthorization": "User requested shortening the hold after all introductory text appears. Trim intro from 300 to 180 frames and move all body clips -120 frames without ripple."
   }
 }

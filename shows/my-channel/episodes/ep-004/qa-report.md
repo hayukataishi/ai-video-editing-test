@@ -83,3 +83,23 @@ A 300-frame (10-second) editable Palmier introductory card was added at the begi
 - The final card consists of five simultaneous text layers on separate native tracks and a matte on V2_AUTO_GRAPHICS. Palmier inspection at frames 60, 150, 270 and 330 confirmed readable text, separate vertical regions, and the transition to the original body.
 - Full episode validation passed with zero issues. Phase 1 artifact QA found all 16 existing render files. Type checking and Remotion rendering were not needed because this change contains native Palmier edits and manifest placement changes.
 - Final live readback confirmed all 80 original clip IDs, sources, durations, trims, gains and fades were preserved, with exactly +300 added to their timeline positions. All 64 narration clips remain synchronized with the 16 graphics clips. The original three pauses now occupy [891,903), [4642,4654), and [6124,6136); the body begins at frame 300. Total duration is 6777 frames (225.9 seconds). Complete dry-run, final scene specification and readback are saved in state/intro-native-sync.json.
+
+## Intro hold shortened to six seconds
+
+The user requested a shorter hold after all introductory text appears. The native card now ends at frame 180 instead of 300 (6 seconds instead of 10). Text entry cues are unchanged; the last text finishes its 10-frame fade-in at frame 94, stays fully visible through frame 170, and fades out over the final 10 frames.
+
+Live Timeline and Media reads, manifest validation, and a dry-run preceded five duration patches for the six introductory clips and a non-ripple move of the 80 body clips by -120 frames. Native timing, graphic placements, inspection frames, and the script table were updated together. No Remotion source, content entry, or render was changed.
+
+Final readback confirmed all 86 clip IDs and properties are preserved apart from the intended introductory end frames and body positions. The body now starts at frame 180 and remains synchronized, with a total duration of 6657 frames. Palmier frames 160 and 210 were visually inspected. Manifest validation passed with zero issues and artifact QA confirmed all sixteen existing files. Evidence: state/intro-shortened-sync.json.
+
+## YouTube thumbnail, title, and description
+
+A dedicated, reusable ProductionThumbnail composition was added for the explicitly requested Remotion thumbnail. It uses three large headline lines, a pink highlight, and a concrete audio-to-explanatory-video diagram. The existing pastel palette is retained with stronger navy contrast. The design is deliberately static, so frame 0 is the complete thumbnail.
+
+- Public component, Zod props, registry, Root registration, package export and Default/Mint/LongJapaneseCopy Storybook variants were added together. Existing TitleCard is an animated title rather than a thumbnail; the new component provides a fixed headline hierarchy and readable transformation diagram.
+- content.json owns the thumbnail props and still-export specifications. A single-frame H.264 source is registered for compatibility with the current video pipeline. The same props are consumed by Remotion still for the actual PNG/JPEG deliverables. There is no new placement in edit.json and no Palmier mutation.
+- Final outputs: renders/youtube/thumbnail.png (3840×2160, 512260 bytes), thumbnail-1280.jpg (1280×720, 113543 bytes), and a 320×180 small-size QA preview. These are all direct Remotion renders. The PNG and JPEG dimensions, file sizes, SHA256 values, and one-frame source were checked separately.
+- Workspace typecheck, lint, episode validation, and Storybook build passed. All three actual Player stories were visually checked at frame 0, which is also the settled and final frame. The rendered JPEG and 320×180 thumbnail were visually reviewed. No text overlap or cropping was found. Phase 1 artifact QA reports 17/17 declared artifacts present.
+- Title and ready-to-paste description are in publishing/title.txt and publishing/description.txt; publishing/youtube.md combines them and includes two alternate title choices. Chapters were derived from the live 6657-frame, 30fps timeline, including the six-second introduction. The first chapter combines the short introduction and overview. No publication was performed.
+- The existing sixteen content entries and complete edit.json are unchanged. The other video renders were not rerendered. Local evidence: state/youtube-package-qa.json and state/youtube-thumbnail-render.json.
+- Export-size reference checked during this task: [YouTube thumbnail help](https://support.google.com/youtube/answer/72431?hl=ja), recommending 3840×2160 for 16:9 video thumbnails and accepting PNG/JPEG. Both deliverables are below 2 MB.

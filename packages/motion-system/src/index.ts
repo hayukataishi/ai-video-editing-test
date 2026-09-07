@@ -1,6 +1,8 @@
 import { registerRoot } from "remotion";
 
 import {
+  productionThumbnailDefaultProps,
+  productionThumbnailSchema,
   semanticExplainerDefaultProps,
   semanticExplainerSchema,
   flowDiagramDefaultProps,
@@ -28,6 +30,7 @@ registerRoot(RemotionRoot);
 
 /** Stable Composition IDs consumed by content manifests and the render pipeline. */
 export const compositionRegistry = {
+  ProductionThumbnail: {compositionId: "ProductionThumbnail", kind: "video", schema: productionThumbnailSchema, defaultProps: productionThumbnailDefaultProps, defaultDurationInFrames: 1, fps: 30, width: 1920, height: 1080},
   SemanticExplainer: {
     compositionId: "SemanticExplainer",
     kind: "video",
