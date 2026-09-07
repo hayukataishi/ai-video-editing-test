@@ -46,7 +46,7 @@
         "ref": "semantic-post-production-collapse"
       },
       "trackId": "auto-graphics",
-      "startFrame": 0,
+      "startFrame": 300,
       "durationFrames": 348,
       "sourceInFrame": 0,
       "layout": {
@@ -67,7 +67,7 @@
         "ref": "semantic-audio-to-explainer-pipeline"
       },
       "trackId": "auto-graphics",
-      "startFrame": 348,
+      "startFrame": 648,
       "durationFrames": 255,
       "sourceInFrame": 0,
       "layout": {
@@ -88,7 +88,7 @@
         "ref": "semantic-ai-editor-handoff"
       },
       "trackId": "auto-graphics",
-      "startFrame": 603,
+      "startFrame": 903,
       "durationFrames": 378,
       "sourceInFrame": 0,
       "layout": {
@@ -109,7 +109,7 @@
         "ref": "semantic-waveform-surgery"
       },
       "trackId": "auto-graphics",
-      "startFrame": 981,
+      "startFrame": 1281,
       "durationFrames": 308,
       "sourceInFrame": 0,
       "layout": {
@@ -130,7 +130,7 @@
         "ref": "semantic-conversational-timeline-revision"
       },
       "trackId": "auto-graphics",
-      "startFrame": 1289,
+      "startFrame": 1589,
       "durationFrames": 514,
       "sourceInFrame": 0,
       "layout": {
@@ -151,7 +151,7 @@
         "ref": "semantic-code-becomes-visual-forms"
       },
       "trackId": "auto-graphics",
-      "startFrame": 1803,
+      "startFrame": 2103,
       "durationFrames": 294,
       "sourceInFrame": 0,
       "layout": {
@@ -172,7 +172,7 @@
         "ref": "semantic-prompt-to-render"
       },
       "trackId": "auto-graphics",
-      "startFrame": 2097,
+      "startFrame": 2397,
       "durationFrames": 212,
       "sourceInFrame": 0,
       "layout": {
@@ -193,7 +193,7 @@
         "ref": "semantic-referral-growth-flywheel"
       },
       "trackId": "auto-graphics",
-      "startFrame": 2309,
+      "startFrame": 2609,
       "durationFrames": 408,
       "sourceInFrame": 0,
       "layout": {
@@ -214,7 +214,7 @@
         "ref": "semantic-speech-to-storyboard"
       },
       "trackId": "auto-graphics",
-      "startFrame": 2717,
+      "startFrame": 3017,
       "durationFrames": 342,
       "sourceInFrame": 0,
       "layout": {
@@ -235,7 +235,7 @@
         "ref": "semantic-command-router-to-edit"
       },
       "trackId": "auto-graphics",
-      "startFrame": 3059,
+      "startFrame": 3359,
       "durationFrames": 410,
       "sourceInFrame": 0,
       "layout": {
@@ -256,7 +256,7 @@
         "ref": "semantic-generate-and-place-at-the-spoken-beat"
       },
       "trackId": "auto-graphics",
-      "startFrame": 3469,
+      "startFrame": 3769,
       "durationFrames": 461,
       "sourceInFrame": 0,
       "layout": {
@@ -277,7 +277,7 @@
         "ref": "semantic-one-chat-revisions"
       },
       "trackId": "auto-graphics",
-      "startFrame": 3930,
+      "startFrame": 4230,
       "durationFrames": 424,
       "sourceInFrame": 0,
       "layout": {
@@ -298,7 +298,7 @@
         "ref": "semantic-production-steps-one-and-two"
       },
       "trackId": "auto-graphics",
-      "startFrame": 4354,
+      "startFrame": 4654,
       "durationFrames": 564,
       "sourceInFrame": 0,
       "layout": {
@@ -319,7 +319,7 @@
         "ref": "semantic-audio-is-the-timing-ruler"
       },
       "trackId": "auto-graphics",
-      "startFrame": 4918,
+      "startFrame": 5218,
       "durationFrames": 587,
       "sourceInFrame": 0,
       "layout": {
@@ -340,7 +340,7 @@
         "ref": "semantic-chat-powered-production-conveyor"
       },
       "trackId": "auto-graphics",
-      "startFrame": 5505,
+      "startFrame": 5805,
       "durationFrames": 331,
       "sourceInFrame": 0,
       "layout": {
@@ -361,7 +361,7 @@
         "ref": "semantic-three-role-finish"
       },
       "trackId": "auto-graphics",
-      "startFrame": 5836,
+      "startFrame": 6136,
       "durationFrames": 641,
       "sourceInFrame": 0,
       "layout": {
@@ -377,87 +377,275 @@
     }
   ],
   "inspectionFrames": [
-    90,
-    174,
-    210,
-    337,
-    443,
-    475,
-    523,
-    592,
-    703,
-    792,
+    0,
+    60,
+    120,
+    270,
+    299,
+    300,
+    390,
+    474,
+    510,
+    637,
+    743,
+    775,
     823,
-    970,
-    1111,
-    1134,
-    1211,
-    1278,
-    1404,
-    1545,
-    1579,
-    1792,
-    1948,
-    1950,
-    1998,
-    2086,
-    2162,
-    2203,
-    2232,
+    892,
+    1003,
+    1092,
+    1123,
+    1270,
+    1411,
+    1434,
+    1511,
+    1578,
+    1704,
+    1845,
+    1879,
+    2092,
+    2248,
+    2250,
     2298,
-    2399,
-    2484,
-    2500,
-    2629,
-    2706,
-    2802,
-    2888,
-    2892,
-    3048,
-    3189,
-    3260,
-    3329,
-    3458,
-    3639,
-    3705,
-    3813,
-    3859,
-    3919,
-    4110,
-    4130,
-    4200,
-    4343,
-    4472,
-    4620,
-    4646,
-    4776,
-    4907,
-    4918,
-    5028,
-    5168,
-    5268,
-    5338,
-    5416,
-    5455,
-    5493,
-    5504,
-    5631,
-    5710,
-    5720,
-    5825,
-    5836,
-    5956,
-    6114,
-    6216,
-    6306,
-    6338,
-    6373,
-    6416,
-    6466,
-    6476
+    2386,
+    2462,
+    2503,
+    2532,
+    2598,
+    2699,
+    2784,
+    2800,
+    2929,
+    3006,
+    3102,
+    3188,
+    3192,
+    3348,
+    3489,
+    3560,
+    3629,
+    3758,
+    3939,
+    4005,
+    4113,
+    4159,
+    4219,
+    4410,
+    4430,
+    4500,
+    4643,
+    4772,
+    4920,
+    4946,
+    5076,
+    5207,
+    5218,
+    5328,
+    5468,
+    5568,
+    5638,
+    5716,
+    5755,
+    5793,
+    5804,
+    5931,
+    6010,
+    6020,
+    6125,
+    6136,
+    6256,
+    6414,
+    6516,
+    6606,
+    6638,
+    6673,
+    6716,
+    6766,
+    6776
   ],
   "metadata": {
     "revision": "semantic-concrete-scenes-v2",
-    "timingAuthority": "Narration track in the target Palmier timeline"
+    "timingAuthority": "Narration track in the target Palmier timeline",
+    "nativeScenes": [
+      {
+        "id": "this-video-production-note",
+        "startFrame": 0,
+        "durationFrames": 300,
+        "title": "この動画の説明",
+        "implementation": "Palmier editable native text over a #FFFDF9 matte. Existing bright pastel theme.",
+        "background": {
+          "hex": "#FFFDF9",
+          "trackId": "auto-graphics",
+          "startFrame": 0,
+          "endFrame": 300
+        },
+        "texts": [
+          {
+            "content": "この動画の説明",
+            "startFrame": 0,
+            "endFrame": 300,
+            "animation": "off",
+            "style": {
+              "fontName": "Hiragino Maru Gothic ProN",
+              "bold": true,
+              "color": "#18324C",
+              "alignment": "center",
+              "outline": {
+                "enabled": false
+              },
+              "shadow": {
+                "enabled": false
+              },
+              "fontCase": "mixed",
+              "fontSize": 76,
+              "background": {
+                "enabled": false
+              }
+            },
+            "transform": {
+              "x": 0.5,
+              "y": 0.17
+            }
+          },
+          {
+            "content": "この解説動画は、",
+            "startFrame": 12,
+            "endFrame": 300,
+            "animation": "off",
+            "style": {
+              "fontName": "Hiragino Maru Gothic ProN",
+              "bold": true,
+              "color": "#18324C",
+              "alignment": "center",
+              "outline": {
+                "enabled": false
+              },
+              "shadow": {
+                "enabled": false
+              },
+              "fontCase": "mixed",
+              "fontSize": 40,
+              "background": {
+                "enabled": false
+              }
+            },
+            "transform": {
+              "x": 0.5,
+              "y": 0.325
+            }
+          },
+          {
+            "content": "Palmier Pro  ＋  Remotion  ＋  Codex",
+            "startFrame": 24,
+            "endFrame": 300,
+            "animation": "off",
+            "style": {
+              "fontName": "Hiragino Maru Gothic ProN",
+              "bold": true,
+              "color": "#18324C",
+              "alignment": "center",
+              "outline": {
+                "enabled": false
+              },
+              "shadow": {
+                "enabled": false
+              },
+              "fontCase": "mixed",
+              "fontSize": 48,
+              "background": {
+                "enabled": true,
+                "color": "#CFE9FF",
+                "opacity": 1,
+                "padding": {
+                  "x": 32,
+                  "y": 22
+                },
+                "cornerRadius": 24
+              }
+            },
+            "transform": {
+              "x": 0.5,
+              "y": 0.445
+            }
+          },
+          {
+            "content": "この3つのツールだけで制作しています。",
+            "startFrame": 58,
+            "endFrame": 300,
+            "animation": "off",
+            "style": {
+              "fontName": "Hiragino Maru Gothic ProN",
+              "bold": true,
+              "color": "#18324C",
+              "alignment": "center",
+              "outline": {
+                "enabled": false
+              },
+              "shadow": {
+                "enabled": false
+              },
+              "fontCase": "mixed",
+              "fontSize": 42,
+              "background": {
+                "enabled": false
+              }
+            },
+            "transform": {
+              "x": 0.5,
+              "y": 0.595
+            }
+          },
+          {
+            "content": "使用モデル：GPT-6 Astra（極高）",
+            "startFrame": 84,
+            "endFrame": 300,
+            "animation": "off",
+            "style": {
+              "fontName": "Hiragino Maru Gothic ProN",
+              "bold": true,
+              "color": "#18324C",
+              "alignment": "center",
+              "outline": {
+                "enabled": false
+              },
+              "shadow": {
+                "enabled": false
+              },
+              "fontCase": "mixed",
+              "fontSize": 44,
+              "background": {
+                "enabled": true,
+                "color": "#E1DAFF",
+                "opacity": 1,
+                "padding": {
+                  "x": 32,
+                  "y": 22
+                },
+                "cornerRadius": 24
+              }
+            },
+            "transform": {
+              "x": 0.5,
+              "y": 0.77
+            }
+          }
+        ],
+        "fadeInFrames": 10,
+        "fadeOutFrames": 10,
+        "narration": "Text-only introductory card; original narration begins at frame 300.",
+        "userProvidedFacts": [
+          "Palmier Pro + Remotion + Codexのみで制作した解説動画",
+          "使用モデル：GPT-6 Astra（極高）"
+        ],
+        "textTrackNames": [
+          "Intro",
+          "Context",
+          "Tools",
+          "Note",
+          "Model"
+        ]
+      }
+    ],
+    "bodyOffsetFrames": 300,
+    "bodyShiftAuthorization": "One-time user request to prepend this introductory scene; move all existing clips +300 frames without ripple."
   }
 }
