@@ -1,4 +1,12 @@
 export {
+  SemanticExplainer,
+  semanticDiagramSchema,
+  semanticExplainerDefaultProps,
+  semanticExplainerSchema,
+  type SemanticDiagram,
+  type SemanticExplainerProps,
+} from "./SemanticExplainer";
+export {
   TitleCard,
   titleCardDefaultProps,
   titleCardSchema,

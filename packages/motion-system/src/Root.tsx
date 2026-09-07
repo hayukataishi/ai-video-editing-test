@@ -1,6 +1,9 @@
 import { Composition } from "remotion";
 
 import {
+  SemanticExplainer,
+  semanticExplainerDefaultProps,
+  semanticExplainerSchema,
   FlowDiagram,
   ManualEditingBottleneck,
   manualEditingBottleneckDefaultProps,
@@ -32,6 +35,7 @@ import { motionSystemTheme } from "./theme";
 export const RemotionRoot = () => {
   return (
     <>
+      <Composition id="SemanticExplainer" component={SemanticExplainer} durationInFrames={641} fps={30} width={1920} height={1080} schema={semanticExplainerSchema} defaultProps={semanticExplainerDefaultProps} />
       <Composition
         id="TitleCard"
         component={TitleCard}

@@ -1,0 +1,463 @@
+{
+  "$schema": "../../../../packages/manifest/schemas/edit-manifest.schema.json",
+  "manifestType": "edit",
+  "schemaVersion": "1.0.0",
+  "projectId": "my-channel",
+  "episodeId": "ep-004",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {
+      "numerator": 30,
+      "denominator": 1
+    },
+    "pixelAspectRatio": 1
+  },
+  "target": {
+    "palmierProject": "youtube",
+    "timeline": "音声編集 2026-09-06 23-55-48",
+    "createIfMissing": false
+  },
+  "tracks": [
+    {
+      "id": "auto-graphics",
+      "kind": "video",
+      "role": "graphics",
+      "palmierName": "V2_AUTO_GRAPHICS",
+      "order": 20,
+      "managed": true,
+      "syncLock": false
+    },
+    {
+      "id": "voice",
+      "kind": "audio",
+      "role": "voice",
+      "palmierName": "Narration",
+      "order": 10,
+      "managed": false,
+      "syncLock": true
+    }
+  ],
+  "placements": [
+    {
+      "id": "place-semantic-post-production-collapse",
+      "source": {
+        "type": "content",
+        "ref": "semantic-post-production-collapse"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 0,
+      "durationFrames": 348,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "収録音声に対するカット・図解・発話区間への配置を実際の波形・関係図・タイムラインで見せ、最後に1つのチャット指示から3工程を動かす。"
+    },
+    {
+      "id": "place-semantic-audio-to-explainer-pipeline",
+      "source": {
+        "type": "content",
+        "ref": "semantic-audio-to-explainer-pipeline"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 348,
+      "durationFrames": 255,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "音声をPalmierへ読み込み、Remotionから渡された図が動画プレビューに加わる。Codexは両ツールを操作する上位の窓口として示す。"
+    },
+    {
+      "id": "place-semantic-ai-editor-handoff",
+      "source": {
+        "type": "content",
+        "ref": "semantic-ai-editor-handoff"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 603,
+      "durationFrames": 378,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "チャットの依頼と編集画面を並べ、従来の人の操作からAIのカーソル操作へ引き継ぎ、素材をタイムラインに整列する。"
+    },
+    {
+      "id": "place-semantic-waveform-surgery",
+      "source": {
+        "type": "content",
+        "ref": "semantic-waveform-surgery"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 981,
+      "durationFrames": 308,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "言い直しと長い無音を異なる波形として選択・切除し、残した3つの説明が隣り合ってつながる。"
+    },
+    {
+      "id": "place-semantic-conversational-timeline-revision",
+      "source": {
+        "type": "content",
+        "ref": "semantic-conversational-timeline-revision"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 1289,
+      "durationFrames": 514,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "チャットで頼んだ字幕がプレビューと字幕レーンへ入り、短縮指示でクリップが短くなる。後半は音声・図解・字幕の配置がそろう。"
+    },
+    {
+      "id": "place-semantic-code-becomes-visual-forms",
+      "source": {
+        "type": "content",
+        "ref": "semantic-code-becomes-visual-forms"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 1803,
+      "durationFrames": 294,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "コードから、成長曲線・複数要素の接続・比較ランキングの3種類を発話順に描く。数値実績ではなく表現の例として示す。"
+    },
+    {
+      "id": "place-semantic-prompt-to-render",
+      "source": {
+        "type": "content",
+        "ref": "semantic-prompt-to-render"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 2097,
+      "durationFrames": 212,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "人の説明意図をCodexが受け取り、AIがコードを書き、関係図アニメーションを出力する。人がコードを手書きする必要がないことまで示す。"
+    },
+    {
+      "id": "place-semantic-referral-growth-flywheel",
+      "source": {
+        "type": "content",
+        "ref": "semantic-referral-growth-flywheel"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 2309,
+      "durationFrames": 408,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "ユーザーの人数が増え、人から3人へ紹介が枝分かれし、成長曲線が伸びる。後半は発話の列挙に合わせて3段階を強調し、成長がユーザー増加に戻る循環を描く。"
+    },
+    {
+      "id": "place-semantic-speech-to-storyboard",
+      "source": {
+        "type": "content",
+        "ref": "semantic-speech-to-storyboard"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 2717,
+      "durationFrames": 342,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "発話の3つの意味を、番号付きストーリーボードへ展開する。人数の増加・紹介の分岐・曲線の伸びを順番に動かし、目で追える説明へ変える。"
+    },
+    {
+      "id": "place-semantic-command-router-to-edit",
+      "source": {
+        "type": "content",
+        "ref": "semantic-command-router-to-edit"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 3059,
+      "durationFrames": 410,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "CodexチャットからPalmierとRemotionへ分岐する指示経路を示し、編集依頼の例ではPalmierに音声を読み込んで不要範囲をカットする。"
+    },
+    {
+      "id": "place-semantic-generate-and-place-at-the-spoken-beat",
+      "source": {
+        "type": "content",
+        "ref": "semantic-generate-and-place-at-the-spoken-beat"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 3469,
+      "durationFrames": 461,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "例として紹介の説明区間を強調し、Remotionが紹介の関係図を生成する。図が専用の空いたレーンを移動して、同じ発話区間の下へ配置される。"
+    },
+    {
+      "id": "place-semantic-one-chat-revisions",
+      "source": {
+        "type": "content",
+        "ref": "semantic-one-chat-revisions"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 3930,
+      "durationFrames": 424,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "同じチャットの修正指示に合わせ、多要素の図をA→B→Cへ整理し、遅れていた図解クリップを音声区間とそろえる。"
+    },
+    {
+      "id": "place-semantic-production-steps-one-and-two",
+      "source": {
+        "type": "content",
+        "ref": "semantic-production-steps-one-and-two"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 4354,
+      "durationFrames": 564,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "全3ステップのうち、まず台本→マイク→収録音声を示す。次にCodexへの依頼、Palmierへの読み込み、無音と言い直しのカットへ展開し、整った音声を次工程へ渡す。"
+    },
+    {
+      "id": "place-semantic-audio-is-the-timing-ruler",
+      "source": {
+        "type": "content",
+        "ref": "semantic-audio-is-the-timing-ruler"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 4918,
+      "durationFrames": 587,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "前半はCodexへの依頼、後半は具体的な発話例と対応図を色・番号・同じ横幅で関連付け、説明している区間へ着地させる。"
+    },
+    {
+      "id": "place-semantic-chat-powered-production-conveyor",
+      "source": {
+        "type": "content",
+        "ref": "semantic-chat-powered-production-conveyor"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 5505,
+      "durationFrames": 331,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "収録後のカット・説明図生成・配置を縦の工程として示し、各成果が右の説明動画へ集まる。最後にチャットから3工程を進める関係をまとめる。"
+    },
+    {
+      "id": "place-semantic-three-role-finish",
+      "source": {
+        "type": "content",
+        "ref": "semantic-three-role-finish"
+      },
+      "trackId": "auto-graphics",
+      "startFrame": 5836,
+      "durationFrames": 641,
+      "sourceInFrame": 0,
+      "layout": {
+        "preset": "full-frame",
+        "opacity": 1
+      },
+      "sync": {
+        "policy": "placement-only",
+        "allowOverwrite": false,
+        "preservePalmierEffects": true
+      },
+      "notes": "前半は編集・コードから図解・チャットから2ツール操作を発話順に実演。後半は収録音声を編集→図解→タイムライン配置へ渡し、Codexの指示で3工程を進める。"
+    }
+  ],
+  "inspectionFrames": [
+    90,
+    174,
+    210,
+    337,
+    443,
+    475,
+    523,
+    592,
+    703,
+    792,
+    823,
+    970,
+    1111,
+    1134,
+    1211,
+    1278,
+    1404,
+    1545,
+    1579,
+    1792,
+    1948,
+    1950,
+    1998,
+    2086,
+    2162,
+    2203,
+    2232,
+    2298,
+    2399,
+    2484,
+    2500,
+    2629,
+    2706,
+    2802,
+    2888,
+    2892,
+    3048,
+    3189,
+    3260,
+    3329,
+    3458,
+    3639,
+    3705,
+    3813,
+    3859,
+    3919,
+    4110,
+    4130,
+    4200,
+    4343,
+    4472,
+    4620,
+    4646,
+    4776,
+    4907,
+    4918,
+    5028,
+    5168,
+    5268,
+    5338,
+    5416,
+    5455,
+    5493,
+    5504,
+    5631,
+    5710,
+    5720,
+    5825,
+    5836,
+    5956,
+    6114,
+    6216,
+    6306,
+    6338,
+    6373,
+    6416,
+    6466,
+    6476
+  ],
+  "metadata": {
+    "revision": "semantic-concrete-scenes-v2",
+    "timingAuthority": "Narration track in the target Palmier timeline"
+  }
+}

@@ -14,7 +14,8 @@
     "./components/ManualEditingBottleneck": "./src/components/ManualEditingBottleneck.tsx",
     "./components/ThreeToolVideoWorkflow": "./src/components/ThreeToolVideoWorkflow.tsx",
     "./components/PalmierEditingWorkflow": "./src/components/PalmierEditingWorkflow.tsx",
-    "./components/CaptionDiagramPlacement": "./src/components/CaptionDiagramPlacement.tsx"
+    "./components/CaptionDiagramPlacement": "./src/components/CaptionDiagramPlacement.tsx",
+    "./components/SemanticExplainer": "./src/components/SemanticExplainer.tsx"
   },
   "scripts": {
     "studio": "remotion studio src/index.ts",

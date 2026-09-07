@@ -1,6 +1,8 @@
 import { registerRoot } from "remotion";
 
 import {
+  semanticExplainerDefaultProps,
+  semanticExplainerSchema,
   flowDiagramDefaultProps,
   flowDiagramSchema,
   manualEditingBottleneckDefaultProps,
@@ -26,6 +28,16 @@ registerRoot(RemotionRoot);
 
 /** Stable Composition IDs consumed by content manifests and the render pipeline. */
 export const compositionRegistry = {
+  SemanticExplainer: {
+    compositionId: "SemanticExplainer",
+    kind: "video",
+    schema: semanticExplainerSchema,
+    defaultProps: semanticExplainerDefaultProps,
+    defaultDurationInFrames: 641,
+    fps: 30,
+    width: 1920,
+    height: 1080,
+  },
   TitleCard: {
     compositionId: "TitleCard",
     kind: "video",

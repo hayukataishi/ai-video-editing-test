@@ -1,0 +1,682 @@
+{
+  "$schema": "../../../../packages/manifest/schemas/content-manifest.schema.json",
+  "manifestType": "content",
+  "schemaVersion": "1.0.0",
+  "projectId": "my-channel",
+  "episodeId": "ep-004",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "frameRate": {
+      "numerator": 30,
+      "denominator": 1
+    },
+    "pixelAspectRatio": 1
+  },
+  "catalog": {
+    "package": "@studio/motion-system",
+    "revision": "workspace"
+  },
+  "themeId": "my-channel-default",
+  "metadata": {
+    "title": "音声から、説明に合う図解アニメーションへ",
+    "revision": "semantic-concrete-scenes-v2"
+  },
+  "items": [
+    {
+      "id": "semantic-post-production-collapse",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 348,
+      "props": {
+        "eyebrow": "INTRO / 収録後の作業",
+        "title": "カット・図解・配置を、\nひとつの指示で進める",
+        "diagram": {
+          "kind": "post-production-collapse",
+          "beats": [
+            56,
+            85,
+            115,
+            195,
+            270,
+            302
+          ],
+          "actions": [
+            "カット",
+            "図解づくり",
+            "タイムラインへ配置"
+          ],
+          "prompt": "チャットに頼む"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-post-production-collapse.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "収録音声に対するカット・図解・発話区間への配置を実際の波形・関係図・タイムラインで見せ、最後に1つのチャット指示から3工程を動かす。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-audio-to-explainer-pipeline",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 255,
+      "props": {
+        "eyebrow": "INTRO / 3つのツール",
+        "title": "音声から、\n解説アニメ付きの動画へ",
+        "diagram": {
+          "kind": "audio-to-explainer-pipeline",
+          "beats": [
+            26,
+            51,
+            73,
+            119,
+            184
+          ],
+          "tools": [
+            "Palmier Pro",
+            "Remotion",
+            "Codex"
+          ],
+          "output": "解説アニメ付き動画"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-audio-to-explainer-pipeline.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "音声をPalmierへ読み込み、Remotionから渡された図が動画プレビューに加わる。Codexは両ツールを操作する上位の窓口として示す。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-ai-editor-handoff",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 378,
+      "props": {
+        "eyebrow": "01 / PALMIER PRO",
+        "title": "チャットの意図を受け取り、\nAIが編集操作へ変える",
+        "diagram": {
+          "kind": "ai-editor-handoff",
+          "beats": [
+            30,
+            73,
+            160,
+            281,
+            335
+          ],
+          "prompt": "音声と素材を並べて、流れを整えて",
+          "manualLabel": "これまでの手作業",
+          "aiLabel": "AIがタイムラインを操作"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-ai-editor-handoff.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "チャットの依頼と編集画面を並べ、従来の人の操作からAIのカーソル操作へ引き継ぎ、素材をタイムラインに整列する。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-waveform-surgery",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 308,
+      "props": {
+        "eyebrow": "01 / PALMIER PRO",
+        "title": "言い直しと長い無音を切ると、\n話の流れがつながる",
+        "diagram": {
+          "kind": "waveform-surgery",
+          "beats": [
+            42,
+            94,
+            123,
+            155,
+            211,
+            256
+          ],
+          "retakeLabel": "言い直し",
+          "silenceLabel": "長い無音",
+          "resultLabel": "必要な話だけを残す"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-waveform-surgery.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "言い直しと長い無音を異なる波形として選択・切除し、残した3つの説明が隣り合ってつながる。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-conversational-timeline-revision",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 514,
+      "props": {
+        "eyebrow": "01 / PALMIER PRO",
+        "title": "字幕も尺も、\n言葉で伝えてタイムラインを直す",
+        "diagram": {
+          "kind": "conversational-timeline-revision",
+          "beats": [
+            75,
+            127,
+            166,
+            230,
+            268,
+            315,
+            365
+          ],
+          "caption": "ここに字幕を入れて",
+          "shorten": "この部分を短くして",
+          "operations": [
+            "音声を読み込む",
+            "不要部分を切る",
+            "字幕・素材を置く"
+          ]
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-conversational-timeline-revision.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "チャットで頼んだ字幕がプレビューと字幕レーンへ入り、短縮指示でクリップが短くなる。後半は音声・図解・字幕の配置がそろう。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-code-becomes-visual-forms",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 294,
+      "props": {
+        "eyebrow": "02 / REMOTION",
+        "title": "コードから、\n数字・関係・順位を動かして伝える",
+        "diagram": {
+          "kind": "code-becomes-visual-forms",
+          "beats": [
+            22,
+            110,
+            159,
+            215,
+            258
+          ],
+          "examples": [
+            "伸びるグラフ",
+            "つながる図解",
+            "比較・ランキング"
+          ]
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-code-becomes-visual-forms.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "コードから、成長曲線・複数要素の接続・比較ランキングの3種類を発話順に描く。数値実績ではなく表現の例として示す。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-prompt-to-render",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 212,
+      "props": {
+        "eyebrow": "02 / REMOTION",
+        "title": "説明に合う図解のコードは、\nAIが生成する",
+        "diagram": {
+          "kind": "prompt-to-render",
+          "beats": [
+            12,
+            47,
+            72,
+            116,
+            154
+          ],
+          "prompt": "この説明に合う図解を作って",
+          "codeLabel": "AIがコードを生成",
+          "outputLabel": "アニメーションが完成"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-prompt-to-render.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "人の説明意図をCodexが受け取り、AIがコードを書き、関係図アニメーションを出力する。人がコードを手書きする必要がないことまで示す。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-referral-growth-flywheel",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 408,
+      "props": {
+        "eyebrow": "02 / REMOTION",
+        "title": "ユーザーの増加が紹介を生み、\n成長をさらに加速させる",
+        "diagram": {
+          "kind": "referral-growth-flywheel",
+          "beats": [
+            22,
+            64,
+            105,
+            219,
+            244,
+            269,
+            278,
+            291
+          ],
+          "entities": [
+            "ユーザー",
+            "紹介",
+            "成長"
+          ]
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-referral-growth-flywheel.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "ユーザーの人数が増え、人から3人へ紹介が枝分かれし、成長曲線が伸びる。後半は発話の列挙に合わせて3段階を強調し、成長がユーザー増加に戻る循環を描く。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-speech-to-storyboard",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 342,
+      "props": {
+        "eyebrow": "02 / REMOTION",
+        "title": "話す内容を、\n伝わる順番と動きへ変える",
+        "diagram": {
+          "kind": "speech-to-storyboard",
+          "beats": [
+            21,
+            53,
+            94,
+            155,
+            219,
+            285
+          ],
+          "concepts": [
+            "話す内容",
+            "見せる順番",
+            "動きで説明"
+          ]
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-speech-to-storyboard.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "発話の3つの意味を、番号付きストーリーボードへ展開する。人数の増加・紹介の分岐・曲線の伸びを順番に動かし、目で追える説明へ変える。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-command-router-to-edit",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 410,
+      "props": {
+        "eyebrow": "03 / CODEX",
+        "title": "ひとつのチャットから、\n編集と図解へ指示を分ける",
+        "diagram": {
+          "kind": "command-router-to-edit",
+          "beats": [
+            12,
+            30,
+            56,
+            90,
+            198,
+            242,
+            289,
+            372
+          ],
+          "hub": "Codex",
+          "branches": [
+            "Palmier Pro",
+            "Remotion"
+          ],
+          "prompt": "音声を読み込んで、\n不要部分をカット"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-command-router-to-edit.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "CodexチャットからPalmierとRemotionへ分岐する指示経路を示し、編集依頼の例ではPalmierに音声を読み込んで不要範囲をカットする。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-generate-and-place-at-the-spoken-beat",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 461,
+      "props": {
+        "eyebrow": "03 / AUDIO SYNC",
+        "title": "話している要点を見つけ、\n対応する図解を同じ位置へ置く",
+        "diagram": {
+          "kind": "generate-and-place-at-the-spoken-beat",
+          "beats": [
+            24,
+            62,
+            147,
+            239,
+            281,
+            314,
+            377,
+            405
+          ],
+          "audioLabel": "話している要点",
+          "visualLabel": "対応する図解",
+          "placementLabel": "同じ位置に配置"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-generate-and-place-at-the-spoken-beat.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "例として紹介の説明区間を強調し、Remotionが紹介の関係図を生成する。図が専用の空いたレーンを移動して、同じ発話区間の下へ配置される。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-one-chat-revisions",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 424,
+      "props": {
+        "eyebrow": "03 / ONE CHAT",
+        "title": "編集も図解も、\n同じ会話で直していける",
+        "diagram": {
+          "kind": "one-chat-revisions",
+          "beats": [
+            8,
+            48,
+            96,
+            152,
+            216,
+            270,
+            331
+          ],
+          "simplifyLabel": "図をもっとシンプルに",
+          "syncLabel": "タイミングを音声に合わせて"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-one-chat-revisions.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "同じチャットの修正指示に合わせ、多要素の図をA→B→Cへ整理し、遅れていた図解クリップを音声区間とそろえる。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-production-steps-one-and-two",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 564,
+      "props": {
+        "eyebrow": "04 / 制作の流れ",
+        "title": "台本から収録し、\n音声を整えるまでの最初の2ステップ",
+        "diagram": {
+          "kind": "production-steps-one-and-two",
+          "beats": [
+            34,
+            81,
+            107,
+            148,
+            199,
+            263,
+            345,
+            452
+          ],
+          "steps": [
+            "台本",
+            "音声を収録",
+            "AIが編集"
+          ],
+          "prompt": "言い直しと無音をカット"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-production-steps-one-and-two.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "全3ステップのうち、まず台本→マイク→収録音声を示す。次にCodexへの依頼、Palmierへの読み込み、無音と言い直しのカットへ展開し、整った音声を次工程へ渡す。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-audio-is-the-timing-ruler",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 587,
+      "props": {
+        "eyebrow": "04 / AUDIO AS SOURCE",
+        "title": "カット後の音声から、\n説明に合う図を作って配置する",
+        "diagram": {
+          "kind": "audio-is-the-timing-ruler",
+          "beats": [
+            0,
+            75,
+            165,
+            224,
+            319,
+            400,
+            458,
+            512
+          ],
+          "audioLabel": "カット後の音声",
+          "visualLabel": "図解のトラック",
+          "placementLabel": "その説明をしている区間へ配置",
+          "examples": [
+            "ユーザーが増える",
+            "紹介が広がる",
+            "成長が加速する"
+          ]
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic/semantic-audio-meaning-placement-v3.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "Codexへの依頼から、カット後の音声にある3つの説明と対応する具体図の生成、同じ時間区間への配置までを二幕で見せる。ユーザー増加・紹介・成長は配置の例として明示する。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-chat-powered-production-conveyor",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 331,
+      "props": {
+        "eyebrow": "04 / PRODUCTION",
+        "title": "カットから図解の配置まで、\nチャットで流れを動かす",
+        "diagram": {
+          "kind": "chat-powered-production-conveyor",
+          "beats": [
+            26,
+            99,
+            134,
+            194,
+            239,
+            253,
+            286
+          ],
+          "stations": [
+            "不要部分をカット",
+            "説明図を生成",
+            "タイムラインへ配置"
+          ],
+          "prompt": "チャットで頼む"
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic-v2/semantic-chat-powered-production-conveyor.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "収録後のカット・説明図生成・配置を縦の工程として示し、各成果が右の説明動画へ集まる。最後にチャットから3工程を進める関係をまとめる。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    },
+    {
+      "id": "semantic-three-role-finish",
+      "compositionId": "SemanticExplainer",
+      "durationFrames": 641,
+      "props": {
+        "eyebrow": "まとめ / 3つの役割",
+        "title": "3つの役割がつながると、\n収録後の制作が進む",
+        "diagram": {
+          "kind": "three-role-finish",
+          "beats": [
+            0,
+            151,
+            298,
+            343,
+            418,
+            488,
+            545,
+            587
+          ],
+          "tools": [
+            "Palmier Pro",
+            "Remotion",
+            "Codex"
+          ],
+          "steps": [
+            "台本を読む",
+            "音声を収録",
+            "チャットで、収録後の作業を進める"
+          ]
+        },
+        "note": ""
+      },
+      "render": {
+        "outputFile": "renders/remotion-semantic/semantic-three-tool-handoff-v2.mp4",
+        "container": "mp4",
+        "codec": "h264",
+        "alpha": false,
+        "audio": false,
+        "overwrite": true
+      },
+      "description": "Palmierの波形編集、Remotionのコードから図への変換、Codexの2ツールへの指示を実演する。後半は台本・収録・編集・図解・配置をつなぎ、チャット指示で進む工程としてまとめる。",
+      "tags": [
+        "pastel",
+        "semantic-explainer",
+        "narration-synced"
+      ]
+    }
+  ]
+}
